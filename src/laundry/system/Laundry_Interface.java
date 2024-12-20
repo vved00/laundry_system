@@ -28,20 +28,35 @@ public class Laundry_Interface extends javax.swing.JFrame {
 
         container = new javax.swing.JPanel();
         Login_page = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
         Main_Interface = new javax.swing.JPanel();
         navBar = new javax.swing.JPanel();
         logoutB = new javax.swing.JButton();
         laundryB = new javax.swing.JButton();
         customerB = new javax.swing.JButton();
         settingsB = new javax.swing.JButton();
+        customerB1 = new javax.swing.JButton();
+        contentPanel = new javax.swing.JPanel();
+        laundryPanel = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        laundryTable = new javax.swing.JTable();
+        jLabel2 = new javax.swing.JLabel();
+        customerPanel = new javax.swing.JPanel();
+        jSrollPane2 = new javax.swing.JScrollPane();
+        customerTable = new javax.swing.JTable();
+        settingsPanel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         container.setLayout(new java.awt.CardLayout());
+
+        Login_page.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setText("LOGIN");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -54,40 +69,56 @@ public class Laundry_Interface extends javax.swing.JFrame {
 
         jTextField2.setText("Username");
 
-        javax.swing.GroupLayout Login_pageLayout = new javax.swing.GroupLayout(Login_page);
-        Login_page.setLayout(Login_pageLayout);
-        Login_pageLayout.setHorizontalGroup(
-            Login_pageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Login_pageLayout.createSequentialGroup()
-                .addContainerGap(503, Short.MAX_VALUE)
-                .addGroup(Login_pageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(Login_pageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Login_pageLayout.createSequentialGroup()
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(92, 92, 92))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Login_pageLayout.createSequentialGroup()
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(59, 59, 59)))))
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setText("LOGIN");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(500, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(127, 127, 127))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(65, 65, 65))))
         );
-        Login_pageLayout.setVerticalGroup(
-            Login_pageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Login_pageLayout.createSequentialGroup()
-                .addContainerGap(131, Short.MAX_VALUE)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(90, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(157, 157, 157))
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(114, 114, 114))
         );
+
+        Login_page.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 820, 380));
 
         container.add(Login_page, "card2");
 
+        Main_Interface.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         navBar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        logoutB.setText("l");
-        navBar.add(logoutB, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, 160, 50));
+        logoutB.setText("Logout");
+        logoutB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logoutBActionPerformed(evt);
+            }
+        });
+        navBar.add(logoutB, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 160, 40));
 
         laundryB.setText("Laundry");
         laundryB.addActionListener(new java.awt.event.ActionListener() {
@@ -95,31 +126,135 @@ public class Laundry_Interface extends javax.swing.JFrame {
                 laundryBActionPerformed(evt);
             }
         });
-        navBar.add(laundryB, new org.netbeans.lib.awtextra.AbsoluteConstraints(3, 84, 160, 50));
+        navBar.add(laundryB, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 160, 40));
 
-        customerB.setText("c");
+        customerB.setText("Laundry Log");
         customerB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 customerBActionPerformed(evt);
             }
         });
-        navBar.add(customerB, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 160, 50));
+        navBar.add(customerB, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 160, 40));
 
         settingsB.setText("Settings");
-        navBar.add(settingsB, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 160, 50));
+        settingsB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                settingsBActionPerformed(evt);
+            }
+        });
+        navBar.add(settingsB, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 160, 40));
 
-        javax.swing.GroupLayout Main_InterfaceLayout = new javax.swing.GroupLayout(Main_Interface);
-        Main_Interface.setLayout(Main_InterfaceLayout);
-        Main_InterfaceLayout.setHorizontalGroup(
-            Main_InterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Main_InterfaceLayout.createSequentialGroup()
-                .addComponent(navBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 667, Short.MAX_VALUE))
+        customerB1.setText("Customer Log");
+        customerB1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                customerB1ActionPerformed(evt);
+            }
+        });
+        navBar.add(customerB1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 160, 40));
+
+        Main_Interface.add(navBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 380));
+
+        contentPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        laundryTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "Queue", "Name", "Contact No.", "Kg", "Price", "Status"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(laundryTable);
+        if (laundryTable.getColumnModel().getColumnCount() > 0) {
+            laundryTable.getColumnModel().getColumn(0).setResizable(false);
+            laundryTable.getColumnModel().getColumn(1).setResizable(false);
+            laundryTable.getColumnModel().getColumn(2).setResizable(false);
+            laundryTable.getColumnModel().getColumn(3).setResizable(false);
+            laundryTable.getColumnModel().getColumn(4).setResizable(false);
+            laundryTable.getColumnModel().getColumn(5).setResizable(false);
+        }
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel2.setText("LAUNDRY QUEUE");
+
+        javax.swing.GroupLayout laundryPanelLayout = new javax.swing.GroupLayout(laundryPanel);
+        laundryPanel.setLayout(laundryPanelLayout);
+        laundryPanelLayout.setHorizontalGroup(
+            laundryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(laundryPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(laundryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 644, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        Main_InterfaceLayout.setVerticalGroup(
-            Main_InterfaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(navBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        laundryPanelLayout.setVerticalGroup(
+            laundryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, laundryPanelLayout.createSequentialGroup()
+                .addContainerGap(37, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(49, 49, 49))
         );
+
+        contentPanel.add(laundryPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 0, 650, 380));
+
+        customerTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "First Name", "Last Name", "Contact Info"
+            }
+        ));
+        jSrollPane2.setViewportView(customerTable);
+
+        javax.swing.GroupLayout customerPanelLayout = new javax.swing.GroupLayout(customerPanel);
+        customerPanel.setLayout(customerPanelLayout);
+        customerPanelLayout.setHorizontalGroup(
+            customerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(customerPanelLayout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(jSrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        customerPanelLayout.setVerticalGroup(
+            customerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(customerPanelLayout.createSequentialGroup()
+                .addGap(90, 90, 90)
+                .addComponent(jSrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        contentPanel.add(customerPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 0, 470, 340));
+
+        javax.swing.GroupLayout settingsPanelLayout = new javax.swing.GroupLayout(settingsPanel);
+        settingsPanel.setLayout(settingsPanelLayout);
+        settingsPanelLayout.setHorizontalGroup(
+            settingsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 470, Short.MAX_VALUE)
+        );
+        settingsPanelLayout.setVerticalGroup(
+            settingsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 340, Short.MAX_VALUE)
+        );
+
+        contentPanel.add(settingsPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 0, 470, 340));
+
+        Main_Interface.add(contentPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 820, -1));
 
         container.add(Main_Interface, "card3");
 
@@ -138,12 +273,39 @@ public class Laundry_Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void laundryBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laundryBActionPerformed
-        // TODO add your handling code here:
+        contentPanel.removeAll();
+        contentPanel.repaint();
+        contentPanel.revalidate();
+        contentPanel.add(laundryPanel);
+        contentPanel.repaint();
+        contentPanel.revalidate();     
     }//GEN-LAST:event_laundryBActionPerformed
 
     private void customerBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerBActionPerformed
-        // TODO add your handling code here:
+        contentPanel.removeAll();
+        contentPanel.repaint();
+        contentPanel.revalidate();
+        contentPanel.add(customerPanel);
+        contentPanel.repaint();
+        contentPanel.revalidate();  
     }//GEN-LAST:event_customerBActionPerformed
+
+    private void settingsBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_settingsBActionPerformed
+        contentPanel.removeAll();
+        contentPanel.repaint();
+        contentPanel.revalidate();
+        contentPanel.add(settingsPanel);
+        contentPanel.repaint();
+        contentPanel.revalidate();  
+    }//GEN-LAST:event_settingsBActionPerformed
+
+    private void logoutBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutBActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_logoutBActionPerformed
+
+    private void customerB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerB1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_customerB1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -184,13 +346,25 @@ public class Laundry_Interface extends javax.swing.JFrame {
     private javax.swing.JPanel Login_page;
     private javax.swing.JPanel Main_Interface;
     private javax.swing.JPanel container;
+    private javax.swing.JPanel contentPanel;
     private javax.swing.JButton customerB;
+    private javax.swing.JButton customerB1;
+    private javax.swing.JPanel customerPanel;
+    private javax.swing.JTable customerTable;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jSrollPane2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JButton laundryB;
+    private javax.swing.JPanel laundryPanel;
+    private javax.swing.JTable laundryTable;
     private javax.swing.JButton logoutB;
     private javax.swing.JPanel navBar;
     private javax.swing.JButton settingsB;
+    private javax.swing.JPanel settingsPanel;
     // End of variables declaration//GEN-END:variables
 }

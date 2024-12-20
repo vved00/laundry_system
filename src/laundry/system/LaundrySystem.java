@@ -15,6 +15,7 @@ public class LaundrySystem {
      */
     public static void main(String[] args) {
         new Laundry_Interface().setVisible(true);
+        
     }
     
 }
