@@ -42,9 +42,9 @@ public class Laundry_Interface extends javax.swing.JFrame {
         customerB1 = new javax.swing.JButton();
         contentPanel = new javax.swing.JPanel();
         laundryPanel = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         laundryTable = new javax.swing.JTable();
-        jLabel2 = new javax.swing.JLabel();
         customerPanel = new javax.swing.JPanel();
         jSrollPane2 = new javax.swing.JScrollPane();
         customerTable = new javax.swing.JTable();
@@ -154,7 +154,10 @@ public class Laundry_Interface extends javax.swing.JFrame {
 
         Main_Interface.add(navBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 380));
 
-        contentPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        contentPanel.setLayout(new java.awt.CardLayout());
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel2.setText("LAUNDRY QUEUE");
 
         laundryTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -185,9 +188,6 @@ public class Laundry_Interface extends javax.swing.JFrame {
             laundryTable.getColumnModel().getColumn(5).setResizable(false);
         }
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel2.setText("LAUNDRY QUEUE");
-
         javax.swing.GroupLayout laundryPanelLayout = new javax.swing.GroupLayout(laundryPanel);
         laundryPanel.setLayout(laundryPanelLayout);
         laundryPanelLayout.setHorizontalGroup(
@@ -195,21 +195,21 @@ public class Laundry_Interface extends javax.swing.JFrame {
             .addGroup(laundryPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(laundryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 644, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 641, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 633, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         laundryPanelLayout.setVerticalGroup(
             laundryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, laundryPanelLayout.createSequentialGroup()
-                .addContainerGap(37, Short.MAX_VALUE)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(49, 49, 49))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(99, 99, 99))
         );
 
-        contentPanel.add(laundryPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 0, 650, 380));
+        contentPanel.add(laundryPanel, "card2");
 
         customerTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -228,33 +228,35 @@ public class Laundry_Interface extends javax.swing.JFrame {
         customerPanel.setLayout(customerPanelLayout);
         customerPanelLayout.setHorizontalGroup(
             customerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(customerPanelLayout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addComponent(jSrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, customerPanelLayout.createSequentialGroup()
+                .addContainerGap(105, Short.MAX_VALUE)
+                .addComponent(jSrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(93, 93, 93))
         );
         customerPanelLayout.setVerticalGroup(
             customerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(customerPanelLayout.createSequentialGroup()
-                .addGap(90, 90, 90)
-                .addComponent(jSrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap()
+                .addComponent(jSrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
-        contentPanel.add(customerPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 0, 470, 340));
+        contentPanel.add(customerPanel, "card3");
 
         javax.swing.GroupLayout settingsPanelLayout = new javax.swing.GroupLayout(settingsPanel);
         settingsPanel.setLayout(settingsPanelLayout);
         settingsPanelLayout.setHorizontalGroup(
             settingsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 470, Short.MAX_VALUE)
+            .addGap(0, 650, Short.MAX_VALUE)
         );
         settingsPanelLayout.setVerticalGroup(
             settingsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 340, Short.MAX_VALUE)
+            .addGap(0, 380, Short.MAX_VALUE)
         );
 
-        contentPanel.add(settingsPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 0, 470, 340));
+        contentPanel.add(settingsPanel, "card4");
 
-        Main_Interface.add(contentPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 820, -1));
+        Main_Interface.add(contentPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, 650, 380));
 
         container.add(Main_Interface, "card3");
 
