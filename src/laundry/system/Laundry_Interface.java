@@ -37,9 +37,9 @@ public class Laundry_Interface extends javax.swing.JFrame {
         navBar = new javax.swing.JPanel();
         logoutB = new javax.swing.JButton();
         laundryB = new javax.swing.JButton();
-        customerB = new javax.swing.JButton();
+        laundryLog = new javax.swing.JButton();
         settingsB = new javax.swing.JButton();
-        customerB1 = new javax.swing.JButton();
+        customerB = new javax.swing.JButton();
         contentPanel = new javax.swing.JPanel();
         laundryPanel = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -128,13 +128,13 @@ public class Laundry_Interface extends javax.swing.JFrame {
         });
         navBar.add(laundryB, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 160, 40));
 
-        customerB.setText("Laundry Log");
-        customerB.addActionListener(new java.awt.event.ActionListener() {
+        laundryLog.setText("Laundry Log");
+        laundryLog.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                customerBActionPerformed(evt);
+                laundryLogActionPerformed(evt);
             }
         });
-        navBar.add(customerB, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 160, 40));
+        navBar.add(laundryLog, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 160, 40));
 
         settingsB.setText("Settings");
         settingsB.addActionListener(new java.awt.event.ActionListener() {
@@ -144,13 +144,13 @@ public class Laundry_Interface extends javax.swing.JFrame {
         });
         navBar.add(settingsB, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 160, 40));
 
-        customerB1.setText("Customer Log");
-        customerB1.addActionListener(new java.awt.event.ActionListener() {
+        customerB.setText("Customer Log");
+        customerB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                customerB1ActionPerformed(evt);
+                customerBActionPerformed(evt);
             }
         });
-        navBar.add(customerB1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 160, 40));
+        navBar.add(customerB, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 160, 40));
 
         Main_Interface.add(navBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 380));
 
@@ -283,14 +283,9 @@ public class Laundry_Interface extends javax.swing.JFrame {
         contentPanel.revalidate();     
     }//GEN-LAST:event_laundryBActionPerformed
 
-    private void customerBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerBActionPerformed
-        contentPanel.removeAll();
-        contentPanel.repaint();
-        contentPanel.revalidate();
-        contentPanel.add(customerPanel);
-        contentPanel.repaint();
-        contentPanel.revalidate();  
-    }//GEN-LAST:event_customerBActionPerformed
+    private void laundryLogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laundryLogActionPerformed
+
+    }//GEN-LAST:event_laundryLogActionPerformed
 
     private void settingsBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_settingsBActionPerformed
         contentPanel.removeAll();
@@ -302,12 +297,22 @@ public class Laundry_Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_settingsBActionPerformed
 
     private void logoutBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutBActionPerformed
-        // TODO add your handling code here:
+        container.removeAll();
+        container.repaint();
+        container.revalidate();
+        container.add(Login_page);
+        container.repaint();
+        container.revalidate(); 
     }//GEN-LAST:event_logoutBActionPerformed
 
-    private void customerB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerB1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_customerB1ActionPerformed
+    private void customerBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerBActionPerformed
+        contentPanel.removeAll();
+        contentPanel.repaint();
+        contentPanel.revalidate();
+        contentPanel.add(customerPanel);
+        contentPanel.repaint();
+        contentPanel.revalidate();  
+    }//GEN-LAST:event_customerBActionPerformed
 
     /**
      * @param args the command line arguments
@@ -350,7 +355,6 @@ public class Laundry_Interface extends javax.swing.JFrame {
     private javax.swing.JPanel container;
     private javax.swing.JPanel contentPanel;
     private javax.swing.JButton customerB;
-    private javax.swing.JButton customerB1;
     private javax.swing.JPanel customerPanel;
     private javax.swing.JTable customerTable;
     private javax.swing.JButton jButton1;
@@ -362,6 +366,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JButton laundryB;
+    private javax.swing.JButton laundryLog;
     private javax.swing.JPanel laundryPanel;
     private javax.swing.JTable laundryTable;
     private javax.swing.JButton logoutB;
