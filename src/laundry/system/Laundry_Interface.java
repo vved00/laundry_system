@@ -48,9 +48,38 @@ public class Laundry_Interface extends javax.swing.JFrame {
         customerB1 = new javax.swing.JButton();
         contentPanel = new javax.swing.JPanel();
         laundryPanel = new javax.swing.JPanel();
+        displayQueuePanel = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        addQButton = new javax.swing.JButton();
+        editQButton = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        queueTable = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         laundryTable = new javax.swing.JTable();
+        queuePanel = new javax.swing.JPanel();
+        qAddPanel = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        weightText = new javax.swing.JTextField();
+        ownerContact = new javax.swing.JTextField();
+        ownerName = new javax.swing.JTextField();
+        browseCustomers = new javax.swing.JButton();
+        doneButton = new javax.swing.JButton();
+        Price = new javax.swing.JLabel();
+        serviceType = new javax.swing.JComboBox<>();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        dateNtime = new javax.swing.JTextField();
+        cancelButton = new javax.swing.JButton();
+        browseCustomer = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        browseCustomerTable = new javax.swing.JTable();
+        jLabel8 = new javax.swing.JLabel();
+        browseCustomerSearch = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        addCustomer = new javax.swing.JButton();
+        selectButton = new javax.swing.JButton();
         settingsPanel = new javax.swing.JPanel();
         customerPanel = new javax.swing.JPanel();
         customerTablePanel = new javax.swing.JPanel();
@@ -217,22 +246,42 @@ public class Laundry_Interface extends javax.swing.JFrame {
 
         contentPanel.setLayout(new java.awt.CardLayout());
 
+        laundryPanel.setLayout(new java.awt.CardLayout());
+
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        addQButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        addQButton.setText("Add Queue");
+        addQButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addQButtonActionPerformed(evt);
+            }
+        });
+        jPanel2.add(addQButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 20, 170, 30));
+
+        editQButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        editQButton.setText("Edit Queue");
+        jPanel2.add(editQButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 20, 170, 30));
+
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel2.setText("LAUNDRY QUEUE");
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, 160, 40));
+
+        queueTable.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         laundryTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "Queue", "Name", "Contact No.", "Kg", "Price", "Status"
+                "Name", "Contact No.", "Kg", "Price", "Service Type", "Recieved Time", "Status"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
+                false, false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -247,28 +296,186 @@ public class Laundry_Interface extends javax.swing.JFrame {
             laundryTable.getColumnModel().getColumn(3).setResizable(false);
             laundryTable.getColumnModel().getColumn(4).setResizable(false);
             laundryTable.getColumnModel().getColumn(5).setResizable(false);
+            laundryTable.getColumnModel().getColumn(6).setResizable(false);
         }
 
-        javax.swing.GroupLayout laundryPanelLayout = new javax.swing.GroupLayout(laundryPanel);
-        laundryPanel.setLayout(laundryPanelLayout);
-        laundryPanelLayout.setHorizontalGroup(
-            laundryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(laundryPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(laundryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 641, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 633, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        queueTable.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(4, 6, 640, 310));
+
+        javax.swing.GroupLayout displayQueuePanelLayout = new javax.swing.GroupLayout(displayQueuePanel);
+        displayQueuePanel.setLayout(displayQueuePanelLayout);
+        displayQueuePanelLayout.setHorizontalGroup(
+            displayQueuePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 653, Short.MAX_VALUE)
+            .addGroup(displayQueuePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(displayQueuePanelLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGroup(displayQueuePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(displayQueuePanelLayout.createSequentialGroup()
+                            .addGap(3, 3, 3)
+                            .addComponent(queueTable, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
-        laundryPanelLayout.setVerticalGroup(
-            laundryPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, laundryPanelLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(99, 99, 99))
+        displayQueuePanelLayout.setVerticalGroup(
+            displayQueuePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 380, Short.MAX_VALUE)
+            .addGroup(displayQueuePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(displayQueuePanelLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGroup(displayQueuePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(displayQueuePanelLayout.createSequentialGroup()
+                            .addGap(55, 55, 55)
+                            .addComponent(queueTable, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
+
+        laundryPanel.add(displayQueuePanel, "card2");
+
+        queuePanel.setLayout(new java.awt.CardLayout());
+
+        qAddPanel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        qAddPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setText("Add Queue");
+        qAddPanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 0, 90, 30));
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setText("Service Type");
+        qAddPanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 60, 90, 40));
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel5.setText("Laundry Owner");
+        qAddPanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 110, 40));
+        qAddPanel.add(weightText, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, 190, -1));
+        qAddPanel.add(ownerContact, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, 190, -1));
+
+        ownerName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ownerNameActionPerformed(evt);
+            }
+        });
+        qAddPanel.add(ownerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, 190, -1));
+
+        browseCustomers.setText("Browse");
+        browseCustomers.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                browseCustomersActionPerformed(evt);
+            }
+        });
+        qAddPanel.add(browseCustomers, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, -1, -1));
+
+        doneButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        doneButton.setText("Done");
+        doneButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                doneButtonActionPerformed(evt);
+            }
+        });
+        qAddPanel.add(doneButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 290, 120, 30));
+
+        Price.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        Price.setText("Total:");
+        qAddPanel.add(Price, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 280, 150, 40));
+
+        serviceType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Wash Only", "Dry Only", "Wash and Dry" }));
+        serviceType.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                serviceTypeActionPerformed(evt);
+            }
+        });
+        qAddPanel.add(serviceType, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 70, 150, 30));
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel6.setText("Weight");
+        qAddPanel.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 70, 40));
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel7.setText("Date");
+        qAddPanel.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 110, 70, 40));
+
+        dateNtime.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dateNtimeActionPerformed(evt);
+            }
+        });
+        qAddPanel.add(dateNtime, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 120, 190, -1));
+
+        cancelButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        cancelButton.setText("Cancel");
+        cancelButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cancelButtonActionPerformed(evt);
+            }
+        });
+        qAddPanel.add(cancelButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 120, 30));
+
+        queuePanel.add(qAddPanel, "card2");
+
+        browseCustomer.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        browseCustomerTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "First Name", "Last Name", "Contact Info"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        browseCustomerTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                browseCustomerTableMouseClicked(evt);
+            }
+        });
+        jScrollPane2.setViewportView(browseCustomerTable);
+        if (browseCustomerTable.getColumnModel().getColumnCount() > 0) {
+            browseCustomerTable.getColumnModel().getColumn(0).setResizable(false);
+            browseCustomerTable.getColumnModel().getColumn(1).setResizable(false);
+            browseCustomerTable.getColumnModel().getColumn(2).setResizable(false);
+        }
+
+        browseCustomer.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 72, 653, 250));
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel8.setText("Search");
+        browseCustomer.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 32, 52, 34));
+        browseCustomer.add(browseCustomerSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(64, 39, 262, -1));
+
+        jLabel9.setText("(if not existing, create new customer profile)");
+        browseCustomer.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 6, -1, -1));
+
+        addCustomer.setText("Add Customer");
+        addCustomer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addCustomerActionPerformed(evt);
+            }
+        });
+        browseCustomer.add(addCustomer, new org.netbeans.lib.awtextra.AbsoluteConstraints(535, 30, 110, 30));
+
+        selectButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        selectButton.setText("Select");
+        selectButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                selectButtonActionPerformed(evt);
+            }
+        });
+        browseCustomer.add(selectButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(525, 333, 120, 30));
+
+        queuePanel.add(browseCustomer, "card8");
+
+        laundryPanel.add(queuePanel, "card3");
 
         contentPanel.add(laundryPanel, "card2");
 
@@ -390,13 +597,28 @@ public class Laundry_Interface extends javax.swing.JFrame {
             new String [] {
                 "First Name", "Last Name", "Contact Num."
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        customerTable.setFocusable(false);
+        customerTable.setRequestFocusEnabled(false);
         customerTable.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 customerTableMouseClicked(evt);
             }
         });
         jSrollPane2.setViewportView(customerTable);
+        if (customerTable.getColumnModel().getColumnCount() > 0) {
+            customerTable.getColumnModel().getColumn(0).setResizable(false);
+            customerTable.getColumnModel().getColumn(1).setResizable(false);
+            customerTable.getColumnModel().getColumn(2).setResizable(false);
+        }
 
         addCustomerBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         addCustomerBtn.setText("ADD");
@@ -455,7 +677,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(customerTablePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(customerTablePanelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGap(0, 4, Short.MAX_VALUE)
                         .addComponent(addCustomerBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(editCustomerBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -655,9 +877,8 @@ public class Laundry_Interface extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(customerInformation2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(l_nameEdit, javax.swing.GroupLayout.DEFAULT_SIZE, 291, Short.MAX_VALUE)
-                    .addGroup(customerInformation2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(c_numberEdit, javax.swing.GroupLayout.DEFAULT_SIZE, 291, Short.MAX_VALUE)
-                        .addComponent(f_nameEdit)))
+                    .addComponent(c_numberEdit, javax.swing.GroupLayout.DEFAULT_SIZE, 291, Short.MAX_VALUE)
+                    .addComponent(f_nameEdit))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         customerInformation2Layout.setVerticalGroup(
@@ -825,20 +1046,51 @@ public class Laundry_Interface extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    
+    // functions
     static int selectedCustomer_id;
     private TableRowSorter<DefaultTableModel> tableRowSorter;
     private void loadCustomerData() {
         DefaultTableModel tableModel = LaundrySystem.getCustomerTableModel();
         customerTable.setModel(tableModel);
+        browseCustomerTable.setModel(tableModel);
         
         // TableRowSorter for filtering
         tableRowSorter = new TableRowSorter<>(tableModel);
         customerTable.setRowSorter(tableRowSorter);
+        browseCustomerTable.setRowSorter(tableRowSorter);
 
         // Hide the customer_id column (index 0)
         if (customerTable.getColumnModel().getColumnCount() > 3) {
             customerTable.getColumnModel().removeColumn(customerTable.getColumnModel().getColumn(0));
+            browseCustomerTable.getColumnModel().removeColumn(browseCustomerTable.getColumnModel().getColumn(0));
         }
+    }
+    
+    private void loadLaundryData(){
+        DefaultTableModel tableModel = LaundrySystem.getLaundryLog();
+        laundryTable.setModel(tableModel);
+        tableRowSorter = new TableRowSorter<>(tableModel);
+        laundryTable.setRowSorter(tableRowSorter);
+        if (laundryTable.getColumnModel().getColumnCount() > 3) {
+            laundryTable.getColumnModel().removeColumn(laundryTable.getColumnModel().getColumn(0));
+        }
+    }
+        
+    private int fetchService(){
+        Object selected = serviceType.getSelectedItem(); 
+        int service = 0;
+        switch(selected.toString()){
+            case "Wash and Dry":
+                service = 1;
+                break;
+            case "Wash Only":
+                service = 2;
+                break;
+            case "Dry Only":
+                service = 3;
+        }
+        return service;
     }
     
     private void applyFilter(String query) {
@@ -866,7 +1118,9 @@ public class Laundry_Interface extends javax.swing.JFrame {
         editCustomerBtn.setEnabled(false);
         deleteCustomerBtn.setEnabled(false);
     }
+    
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        loadLaundryData();
         container.removeAll();
         container.repaint();
         container.revalidate();
@@ -876,6 +1130,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void laundryBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laundryBActionPerformed
+        loadLaundryData();
         contentPanel.removeAll();
         contentPanel.repaint();
         contentPanel.revalidate();
@@ -1004,29 +1259,29 @@ public class Laundry_Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_editCancelBtnActionPerformed
 
     private void editConfirmBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editConfirmBtnActionPerformed
-    String fname = f_nameEdit.getText();
-    String lname = l_nameEdit.getText();
-    String cnumber = c_numberEdit.getText();
-    int customerID = selectedCustomer_id;
+        String fname = f_nameEdit.getText();
+        String lname = l_nameEdit.getText();
+        String cnumber = c_numberEdit.getText();
+        int customerID = selectedCustomer_id;
 
-    if (!fname.isEmpty() && !lname.isEmpty() && !cnumber.isEmpty()) {
-        boolean isEdited = LaundrySystem.editCustomer(customerID, fname, lname, cnumber);
-        if (isEdited) {
-            JOptionPane.showMessageDialog(this, "Customer edited successfully!");
-            clearSelectedCustomer();
-            loadCustomerData();
-            contentPanel.removeAll();
-            contentPanel.repaint();
-            contentPanel.revalidate();
-            contentPanel.add(customerTablePanel);
-            contentPanel.repaint();
-            contentPanel.revalidate();
+        if (!fname.isEmpty() && !lname.isEmpty() && !cnumber.isEmpty()) {
+            boolean isEdited = LaundrySystem.editCustomer(customerID, fname, lname, cnumber);
+            if (isEdited) {
+                JOptionPane.showMessageDialog(this, "Customer edited successfully!");
+                clearSelectedCustomer();
+                loadCustomerData();
+                contentPanel.removeAll();
+                contentPanel.repaint();
+                contentPanel.revalidate();
+                contentPanel.add(customerTablePanel);
+                contentPanel.repaint();
+                contentPanel.revalidate();
+            } else {
+                JOptionPane.showMessageDialog(this, "Failed to edit customer. Please try again.");
+            }
         } else {
-            JOptionPane.showMessageDialog(this, "Failed to edit customer. Please try again.");
+            JOptionPane.showMessageDialog(this, "All fields must be filled out!");
         }
-    } else {
-        JOptionPane.showMessageDialog(this, "All fields must be filled out!");
-    }
     }//GEN-LAST:event_editConfirmBtnActionPerformed
 
     private void f_nameDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_f_nameDeleteActionPerformed
@@ -1141,6 +1396,105 @@ public class Laundry_Interface extends javax.swing.JFrame {
         applyFilter(query);
     }//GEN-LAST:event_c_numberKeyReleased
 
+    private void serviceTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_serviceTypeActionPerformed
+        int service = fetchService();
+        Float service_fee = LaundrySystem.fetchServiceFee(service);
+        Float price =  service_fee * Float.parseFloat(weightText.getText());
+        Price.setText("Total: " + price);
+    }//GEN-LAST:event_serviceTypeActionPerformed
+
+    private void addQButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addQButtonActionPerformed
+        String dNt = LaundrySystem.getDateNTime();
+        dateNtime.setText(dNt);
+        laundryPanel.removeAll();
+        laundryPanel.repaint();
+        laundryPanel.revalidate();
+        laundryPanel.add(queuePanel);
+        laundryPanel.repaint();
+        laundryPanel.revalidate();
+    }//GEN-LAST:event_addQButtonActionPerformed
+
+    private void doneButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_doneButtonActionPerformed
+        float weight = Float.parseFloat(weightText.getText());
+        String date = dateNtime.getText();
+        int service = fetchService();
+        
+        boolean isAdded = LaundrySystem.addQueue(selectedCustomer_id, weight, service, date, 1);
+        if (isAdded) {
+            JOptionPane.showMessageDialog(this, "New Queue added successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
+            weightText.setText("");
+            ownerName.setText("");
+            ownerContact.setText("");
+            loadLaundryData();
+            laundryPanel.removeAll();
+            laundryPanel.repaint();
+            laundryPanel.revalidate();
+            laundryPanel.add(displayQueuePanel);
+            laundryPanel.repaint();
+            laundryPanel.revalidate();
+        } else {
+            JOptionPane.showMessageDialog(this, "Failed to add customer. Please try again.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_doneButtonActionPerformed
+
+    private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
+        laundryPanel.removeAll();
+        laundryPanel.repaint();
+        laundryPanel.revalidate();
+        laundryPanel.add(displayQueuePanel);
+        laundryPanel.repaint();
+        laundryPanel.revalidate();
+    }//GEN-LAST:event_cancelButtonActionPerformed
+
+    private void browseCustomersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_browseCustomersActionPerformed
+        loadCustomerData();
+        queuePanel.removeAll();
+        queuePanel.repaint();
+        queuePanel.revalidate();
+        queuePanel.add(browseCustomer);
+        queuePanel.repaint();
+        queuePanel.revalidate();
+    }//GEN-LAST:event_browseCustomersActionPerformed
+
+    private void addCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addCustomerActionPerformed
+        contentPanel.removeAll();
+        contentPanel.repaint();
+        contentPanel.revalidate();
+        contentPanel.add(customerAddPanel);
+        contentPanel.repaint();
+        contentPanel.revalidate();
+    }//GEN-LAST:event_addCustomerActionPerformed
+
+    private void browseCustomerTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_browseCustomerTableMouseClicked
+
+    }//GEN-LAST:event_browseCustomerTableMouseClicked
+
+    private void ownerNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ownerNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ownerNameActionPerformed
+
+    private void selectButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectButtonActionPerformed
+        int row = browseCustomerTable.getSelectedRow();
+        // retrieve data from the model
+        int modelRow = browseCustomerTable.convertRowIndexToModel(row);
+        selectedCustomer_id = (int) browseCustomerTable.getModel().getValueAt(modelRow, 0);
+        String first_name = browseCustomerTable.getModel().getValueAt(modelRow, 1).toString() + " ";
+        String owner_name = first_name.concat(browseCustomerTable.getModel().getValueAt(modelRow, 2).toString());
+        ownerName.setText(owner_name);
+        ownerContact.setText(browseCustomerTable.getModel().getValueAt(modelRow, 3).toString());
+        
+        queuePanel.removeAll();
+        queuePanel.repaint();
+        queuePanel.revalidate();
+        queuePanel.add(qAddPanel);
+        queuePanel.repaint();
+        queuePanel.revalidate();
+    }//GEN-LAST:event_selectButtonActionPerformed
+
+    private void dateNtimeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dateNtimeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dateNtimeActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1179,14 +1533,22 @@ public class Laundry_Interface extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Login_page;
     private javax.swing.JPanel Main_Interface;
+    private javax.swing.JLabel Price;
     private javax.swing.JButton addCancelBtn;
     private javax.swing.JButton addConfirmBtn;
+    private javax.swing.JButton addCustomer;
     private javax.swing.JButton addCustomerBtn;
     private javax.swing.JPanel addPanel;
+    private javax.swing.JButton addQButton;
+    private javax.swing.JPanel browseCustomer;
+    private javax.swing.JTextField browseCustomerSearch;
+    private javax.swing.JTable browseCustomerTable;
+    private javax.swing.JButton browseCustomers;
     private javax.swing.JTextField c_number;
     private javax.swing.JTextField c_numberAdd;
     private javax.swing.JTextField c_numberDelete;
     private javax.swing.JTextField c_numberEdit;
+    private javax.swing.JButton cancelButton;
     private javax.swing.JLabel cnumberLabel;
     private javax.swing.JLabel cnumberLabel1;
     private javax.swing.JLabel cnumberLabel2;
@@ -1205,12 +1567,16 @@ public class Laundry_Interface extends javax.swing.JFrame {
     private javax.swing.JPanel customerPanel;
     private javax.swing.JTable customerTable;
     private javax.swing.JPanel customerTablePanel;
+    private javax.swing.JTextField dateNtime;
     private javax.swing.JButton deleteCancelBtn;
     private javax.swing.JButton deleteConfirmBtn;
     private javax.swing.JButton deleteCustomerBtn;
+    private javax.swing.JPanel displayQueuePanel;
+    private javax.swing.JButton doneButton;
     private javax.swing.JButton editCancelBtn;
     private javax.swing.JButton editConfirmBtn;
     private javax.swing.JButton editCustomerBtn;
+    private javax.swing.JButton editQButton;
     private javax.swing.JTextField f_name;
     private javax.swing.JTextField f_nameAdd;
     private javax.swing.JTextField f_nameDelete;
@@ -1222,8 +1588,17 @@ public class Laundry_Interface extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jSrollPane2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
@@ -1240,7 +1615,15 @@ public class Laundry_Interface extends javax.swing.JFrame {
     private javax.swing.JLabel lnameLabel3;
     private javax.swing.JButton logoutB;
     private javax.swing.JPanel navBar;
+    private javax.swing.JTextField ownerContact;
+    private javax.swing.JTextField ownerName;
+    private javax.swing.JPanel qAddPanel;
+    private javax.swing.JPanel queuePanel;
+    private javax.swing.JPanel queueTable;
+    private javax.swing.JButton selectButton;
+    private javax.swing.JComboBox<String> serviceType;
     private javax.swing.JButton settingsB;
     private javax.swing.JPanel settingsPanel;
+    private javax.swing.JTextField weightText;
     // End of variables declaration//GEN-END:variables
 }
