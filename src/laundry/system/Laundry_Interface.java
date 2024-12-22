@@ -5,6 +5,9 @@
 package laundry.system;
 
 import javax.swing.JOptionPane;
+import javax.swing.RowFilter;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableRowSorter;
 
 /**
  *
@@ -288,9 +291,19 @@ public class Laundry_Interface extends javax.swing.JFrame {
 
         customerInformation.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Customer Information", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 12))); // NOI18N
 
+        f_name.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                f_nameMouseClicked(evt);
+            }
+        });
         f_name.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 f_nameActionPerformed(evt);
+            }
+        });
+        f_name.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                f_nameKeyReleased(evt);
             }
         });
 
@@ -298,17 +311,37 @@ public class Laundry_Interface extends javax.swing.JFrame {
 
         lnameLabel.setText("Last Name");
 
+        l_name.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                l_nameMouseClicked(evt);
+            }
+        });
         l_name.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 l_nameActionPerformed(evt);
             }
         });
+        l_name.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                l_nameKeyReleased(evt);
+            }
+        });
 
         cnumberLabel.setText("Contact Number");
 
+        c_number.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                c_numberMouseClicked(evt);
+            }
+        });
         c_number.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 c_numberActionPerformed(evt);
+            }
+        });
+        c_number.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                c_numberKeyReleased(evt);
             }
         });
 
@@ -358,6 +391,11 @@ public class Laundry_Interface extends javax.swing.JFrame {
                 "First Name", "Last Name", "Contact Num."
             }
         ));
+        customerTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                customerTableMouseClicked(evt);
+            }
+        });
         jSrollPane2.setViewportView(customerTable);
 
         addCustomerBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -377,6 +415,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
         editCustomerBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         editCustomerBtn.setText("EDIT");
         editCustomerBtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        editCustomerBtn.setEnabled(false);
         editCustomerBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 editCustomerBtnActionPerformed(evt);
@@ -386,6 +425,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
         deleteCustomerBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         deleteCustomerBtn.setText("DELETE");
         deleteCustomerBtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        deleteCustomerBtn.setEnabled(false);
         deleteCustomerBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deleteCustomerBtnActionPerformed(evt);
@@ -601,23 +641,24 @@ public class Laundry_Interface extends javax.swing.JFrame {
         customerInformation2Layout.setHorizontalGroup(
             customerInformation2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(customerInformation2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(customerInformation2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cnumberLabel2)
-                    .addComponent(lnameLabel2)
-                    .addComponent(fnameLabel2))
-                .addGap(18, 18, 18)
-                .addGroup(customerInformation2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(l_nameEdit, javax.swing.GroupLayout.DEFAULT_SIZE, 291, Short.MAX_VALUE)
-                    .addComponent(c_numberEdit)
-                    .addComponent(f_nameEdit))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(customerInformation2Layout.createSequentialGroup()
                 .addContainerGap(46, Short.MAX_VALUE)
                 .addComponent(editCancelBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(39, 39, 39)
                 .addComponent(editConfirmBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(44, 44, 44))
+            .addGroup(customerInformation2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(customerInformation2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cnumberLabel2)
+                    .addComponent(fnameLabel2)
+                    .addComponent(lnameLabel2))
+                .addGap(18, 18, 18)
+                .addGroup(customerInformation2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(l_nameEdit, javax.swing.GroupLayout.DEFAULT_SIZE, 291, Short.MAX_VALUE)
+                    .addGroup(customerInformation2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(c_numberEdit, javax.swing.GroupLayout.DEFAULT_SIZE, 291, Short.MAX_VALUE)
+                        .addComponent(f_nameEdit)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         customerInformation2Layout.setVerticalGroup(
             customerInformation2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -626,15 +667,15 @@ public class Laundry_Interface extends javax.swing.JFrame {
                 .addGroup(customerInformation2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(fnameLabel2)
                     .addComponent(f_nameEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
+                .addGap(18, 18, 18)
                 .addGroup(customerInformation2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(lnameLabel2)
                     .addComponent(l_nameEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
+                .addGap(18, 18, 18)
                 .addGroup(customerInformation2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(cnumberLabel2)
                     .addComponent(c_numberEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
                 .addGroup(customerInformation2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(editCancelBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(editConfirmBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -664,6 +705,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
 
         customerInformation3.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Customer Information", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
 
+        f_nameDelete.setFocusable(false);
         f_nameDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 f_nameDeleteActionPerformed(evt);
@@ -676,6 +718,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
         lnameLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lnameLabel3.setText("Last Name");
 
+        l_nameDelete.setFocusable(false);
         l_nameDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 l_nameDeleteActionPerformed(evt);
@@ -685,6 +728,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
         cnumberLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         cnumberLabel3.setText("Contact Number");
 
+        c_numberDelete.setFocusable(false);
         c_numberDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 c_numberDeleteActionPerformed(evt);
@@ -739,15 +783,15 @@ public class Laundry_Interface extends javax.swing.JFrame {
                 .addGroup(customerInformation3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(fnameLabel3)
                     .addComponent(f_nameDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
+                .addGap(18, 18, 18)
                 .addGroup(customerInformation3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(lnameLabel3)
                     .addComponent(l_nameDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
+                .addGap(18, 18, 18)
                 .addGroup(customerInformation3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(cnumberLabel3)
                     .addComponent(c_numberDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
                 .addGroup(customerInformation3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(deleteCancelBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(deleteConfirmBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -781,7 +825,47 @@ public class Laundry_Interface extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    static int selectedCustomer_id;
+    private TableRowSorter<DefaultTableModel> tableRowSorter;
+    private void loadCustomerData() {
+        DefaultTableModel tableModel = LaundrySystem.getCustomerTableModel();
+        customerTable.setModel(tableModel);
+        
+        // TableRowSorter for filtering
+        tableRowSorter = new TableRowSorter<>(tableModel);
+        customerTable.setRowSorter(tableRowSorter);
 
+        // Hide the customer_id column (index 0)
+        if (customerTable.getColumnModel().getColumnCount() > 3) {
+            customerTable.getColumnModel().removeColumn(customerTable.getColumnModel().getColumn(0));
+        }
+    }
+    
+    private void applyFilter(String query) {
+        if (query.isEmpty()) {
+            tableRowSorter.setRowFilter(null); // Show all rows
+        } else {
+            tableRowSorter.setRowFilter(RowFilter.regexFilter("(?i)" + query, 1, 2, 3)); 
+            // Filters columns 1 (First Name), 2 (Last Name), and 3 (Contact Number)
+        }
+    }
+
+    private void clearSelectedCustomer(){
+        f_name.setText("");
+        l_name.setText("");
+        c_number.setText("");
+        
+        f_nameEdit.setText("");
+        l_nameEdit.setText("");
+        c_numberEdit.setText("");
+        
+        f_nameDelete.setText("");
+        l_nameDelete.setText("");
+        c_numberDelete.setText("");
+        
+        editCustomerBtn.setEnabled(false);
+        deleteCustomerBtn.setEnabled(false);
+    }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         container.removeAll();
         container.repaint();
@@ -818,6 +902,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_logoutBActionPerformed
 
     private void customerB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerB1ActionPerformed
+        loadCustomerData();
         contentPanel.removeAll();
         contentPanel.repaint();
         contentPanel.revalidate();
@@ -872,6 +957,13 @@ public class Laundry_Interface extends javax.swing.JFrame {
                 f_nameAdd.setText("");
                 l_nameAdd.setText("");
                 c_numberAdd.setText("");
+                loadCustomerData();
+                contentPanel.removeAll();
+                contentPanel.repaint();
+                contentPanel.revalidate();
+                contentPanel.add(customerTablePanel);
+                contentPanel.repaint();
+                contentPanel.revalidate();
             } else {
                 JOptionPane.showMessageDialog(this, "Failed to add customer. Please try again.", "Error", JOptionPane.ERROR_MESSAGE);
             }
@@ -908,10 +1000,33 @@ public class Laundry_Interface extends javax.swing.JFrame {
         contentPanel.add(customerTablePanel);
         contentPanel.repaint();
         contentPanel.revalidate();
+        clearSelectedCustomer();
     }//GEN-LAST:event_editCancelBtnActionPerformed
 
     private void editConfirmBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editConfirmBtnActionPerformed
-        // TODO add your handling code here:
+    String fname = f_nameEdit.getText();
+    String lname = l_nameEdit.getText();
+    String cnumber = c_numberEdit.getText();
+    int customerID = selectedCustomer_id;
+
+    if (!fname.isEmpty() && !lname.isEmpty() && !cnumber.isEmpty()) {
+        boolean isEdited = LaundrySystem.editCustomer(customerID, fname, lname, cnumber);
+        if (isEdited) {
+            JOptionPane.showMessageDialog(this, "Customer edited successfully!");
+            clearSelectedCustomer();
+            loadCustomerData();
+            contentPanel.removeAll();
+            contentPanel.repaint();
+            contentPanel.revalidate();
+            contentPanel.add(customerTablePanel);
+            contentPanel.repaint();
+            contentPanel.revalidate();
+        } else {
+            JOptionPane.showMessageDialog(this, "Failed to edit customer. Please try again.");
+        }
+    } else {
+        JOptionPane.showMessageDialog(this, "All fields must be filled out!");
+    }
     }//GEN-LAST:event_editConfirmBtnActionPerformed
 
     private void f_nameDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_f_nameDeleteActionPerformed
@@ -933,10 +1048,28 @@ public class Laundry_Interface extends javax.swing.JFrame {
         contentPanel.add(customerTablePanel);
         contentPanel.repaint();
         contentPanel.revalidate();
+        clearSelectedCustomer();
     }//GEN-LAST:event_deleteCancelBtnActionPerformed
 
     private void deleteConfirmBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteConfirmBtnActionPerformed
-        // TODO add your handling code here:
+
+        int confirmation = JOptionPane.showConfirmDialog(this, "Are you sure you want to delete this customer?", "Confirm Delete", JOptionPane.YES_NO_OPTION);
+        if (confirmation == JOptionPane.YES_OPTION) {
+            boolean isDeleted = LaundrySystem.deleteCustomer(selectedCustomer_id);
+            if (isDeleted) {
+                JOptionPane.showMessageDialog(this, "Customer deleted successfully!");
+                clearSelectedCustomer();
+                loadCustomerData();
+                contentPanel.removeAll();
+                contentPanel.repaint();
+                contentPanel.revalidate();
+                contentPanel.add(customerTablePanel);
+                contentPanel.repaint();
+                contentPanel.revalidate();
+            } else {
+                JOptionPane.showMessageDialog(this, "Failed to delete customer. Please try again.");
+            }
+        }
     }//GEN-LAST:event_deleteConfirmBtnActionPerformed
 
     private void editCustomerBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editCustomerBtnActionPerformed
@@ -960,6 +1093,53 @@ public class Laundry_Interface extends javax.swing.JFrame {
     private void addCustomerBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addCustomerBtnMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_addCustomerBtnMouseClicked
+
+    private void customerTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_customerTableMouseClicked
+        int row = customerTable.getSelectedRow();
+        // retrieve data from the model
+        int modelRow = customerTable.convertRowIndexToModel(row);
+        selectedCustomer_id = (int) customerTable.getModel().getValueAt(modelRow, 0);
+        f_name.setText(customerTable.getModel().getValueAt(modelRow, 1).toString());
+        l_name.setText(customerTable.getModel().getValueAt(modelRow, 2).toString());
+        c_number.setText(customerTable.getModel().getValueAt(modelRow, 3).toString());
+
+        f_nameEdit.setText(f_name.getText());
+        l_nameEdit.setText(l_name.getText());
+        c_numberEdit.setText(c_number.getText());
+        f_nameDelete.setText(f_name.getText());
+        l_nameDelete.setText(l_name.getText());
+        c_numberDelete.setText(c_number.getText());
+
+        editCustomerBtn.setEnabled(true);
+        deleteCustomerBtn.setEnabled(true);
+    }//GEN-LAST:event_customerTableMouseClicked
+
+    private void f_nameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_f_nameMouseClicked
+        clearSelectedCustomer();
+    }//GEN-LAST:event_f_nameMouseClicked
+
+    private void f_nameKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_f_nameKeyReleased
+        String query = f_name.getText().trim();
+        applyFilter(query);
+    }//GEN-LAST:event_f_nameKeyReleased
+
+    private void l_nameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_l_nameMouseClicked
+        clearSelectedCustomer();
+    }//GEN-LAST:event_l_nameMouseClicked
+
+    private void c_numberMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c_numberMouseClicked
+        clearSelectedCustomer();
+    }//GEN-LAST:event_c_numberMouseClicked
+
+    private void l_nameKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_l_nameKeyReleased
+        String query = l_name.getText().trim();
+        applyFilter(query);
+    }//GEN-LAST:event_l_nameKeyReleased
+
+    private void c_numberKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_c_numberKeyReleased
+        String query = c_number.getText().trim();
+        applyFilter(query);
+    }//GEN-LAST:event_c_numberKeyReleased
 
     /**
      * @param args the command line arguments
