@@ -867,12 +867,20 @@ public class Laundry_Interface extends javax.swing.JFrame {
         deleteCustomerBtn.setEnabled(false);
     }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        container.removeAll();
-        container.repaint();
-        container.revalidate();
-        container.add(Main_Interface);
-        container.repaint();
-        container.revalidate();        
+        String username = jTextField2.getText(); // Get the entered username
+        String password = jTextField1.getText(); // Get the entered password
+
+        if (LaundrySystem.validateLogin(username, password)) {
+            JOptionPane.showMessageDialog(this, "Login successful!", "Success", JOptionPane.INFORMATION_MESSAGE);
+            container.removeAll(); // Remove the login page
+            container.repaint();
+            container.revalidate();
+            container.add(Main_Interface); // Show the main interface
+            container.repaint();
+            container.revalidate();
+        } else {
+            JOptionPane.showMessageDialog(this, "Invalid username or password!", "Error", JOptionPane.ERROR_MESSAGE);
+        }       
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void laundryBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laundryBActionPerformed

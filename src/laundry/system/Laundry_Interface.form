@@ -865,7 +865,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace pref="46" max="32767" attributes="0"/>
+                                  <EmptySpace pref="48" max="32767" attributes="0"/>
                                   <Component id="editCancelBtn" min="-2" pref="151" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                                   <Component id="editConfirmBtn" min="-2" pref="151" max="-2" attributes="0"/>
@@ -881,10 +881,8 @@
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                       <Component id="l_nameEdit" pref="291" max="32767" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="c_numberEdit" alignment="0" pref="291" max="32767" attributes="0"/>
-                                          <Component id="f_nameEdit" alignment="0" max="32767" attributes="0"/>
-                                      </Group>
+                                      <Component id="c_numberEdit" alignment="0" pref="291" max="32767" attributes="0"/>
+                                      <Component id="f_nameEdit" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="32767" attributes="0"/>
                               </Group>
@@ -1060,7 +1058,7 @@
                                   <EmptySpace max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace pref="46" max="32767" attributes="0"/>
+                                  <EmptySpace pref="48" max="32767" attributes="0"/>
                                   <Component id="deleteCancelBtn" min="-2" pref="151" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                                   <Component id="deleteConfirmBtn" min="-2" pref="151" max="-2" attributes="0"/>
