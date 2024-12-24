@@ -117,8 +117,8 @@ public class LaundrySystem {
                "JOIN customer_log ON laundry_log.laundry_owner = customer_log.customer_id " +
                "JOIN services ON laundry_log.laundry_service = services.service_id " +
                "JOIN payment_status ON laundry_log.payment_status = payment_status.payment_id " +
-               "JOIN laundry_status ON laundry_log.laundry_status = laundry_status.status_id " +
-               "WHERE laundry_log.laundry_status != 5";
+               "JOIN laundry_status ON laundry_log.laundry_status = laundry_status.status_id ";// +
+               //"WHERE laundry_log.laundry_status != 5";
         
         DefaultTableModel tableModel = new DefaultTableModel(new String[]{
                 "Laundry ID",  "Name", "Contact Number", "Weight (kg)",
@@ -180,6 +180,7 @@ public class LaundrySystem {
             return false;
         }
     }
+
     // get service fee
     public static float fetchServiceFee(int service){
         String query = "SELECT * FROM services " + "WHERE services.service_id = ?";
@@ -203,46 +204,6 @@ public class LaundrySystem {
 
         return formattedDateTime;
     }
-    // display laundry log
-    public static DefaultTableModel laundryLog(){
-        String query = "SELECT laundry_log.laundry_id, laundry_log.laundry_weight, laundry_log.laundry_received_time, " +
-               "laundry_log.laundry_claimed_time, customer_log.customer_id, customer_log.first_name, " +
-               "customer_log.last_name, customer_log.contact_number, laundry_status.status_name AS laundry_status, " +
-               "services.service_name AS laundry_service, services.price_per_kg, " +
-               "payment_status.payment_status_name " +
-               "FROM laundry_log " +
-               "JOIN customer_log ON laundry_log.laundry_owner = customer_log.customer_id " +
-               "JOIN services ON laundry_log.laundry_service = services.service_id " +
-               "JOIN payment_status ON laundry_log.payment_status = payment_status.payment_id " +
-               "JOIN laundry_status ON laundry_log.laundry_status = laundry_status.status_id ";
-        DefaultTableModel tableModel = new DefaultTableModel(new String[]{
-                "No",  "Name", "Contact Number", "Weight (kg)",
-                "Service Type", "Price" , "Payment Status", "Received Time", "Claimed Time", "Laundry Status"
-            }, 0);
-        try (PreparedStatement pst = conn.prepareStatement(query);
-             ResultSet resultSet = pst.executeQuery()) {
-            while (resultSet.next()) {
-                Vector<Object> row = new Vector<>();
-                row.add(resultSet.getInt("laundry_id"));
-                String name = resultSet.getString("first_name").concat(" " + resultSet.getString("last_name"));
-                row.add(name);
-                row.add(resultSet.getString("contact_number"));
-                int price_kg = resultSet.getInt("price_per_kg");
-                float weight = resultSet.getInt("laundry_weight");
-                row.add(weight);
-                row.add(resultSet.getString("laundry_service"));
-                row.add(price_kg * weight);
-                row.add(resultSet.getString("payment_status_name"));
-                row.add(resultSet.getString("laundry_received_time"));
-                row.add(resultSet.getString("laundry_claimed_time"));
-                row.add(resultSet.getString("laundry_status"));
-                tableModel.addRow(row);
-            }
-        } catch (SQLException ex) {
-            ex.printStackTrace(); // For debugging
-        }
-        
-        return tableModel;
-    }
+    
     
 }
