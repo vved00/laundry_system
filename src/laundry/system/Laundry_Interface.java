@@ -1180,9 +1180,22 @@ public class Laundry_Interface extends javax.swing.JFrame {
         editCustomerBtn.setEnabled(false);
         deleteCustomerBtn.setEnabled(false);
     }
+
+    private void filterLaundry() {
+        tableRowSorter.setRowFilter(new RowFilter<DefaultTableModel, Integer>() {
+            @Override
+            public boolean include(RowFilter.Entry<? extends DefaultTableModel, ? extends Integer> entry) {
+                String status = entry.getModel().getValueAt(entry.getIdentifier(), 8).toString();
+                String payment = entry.getModel().getValueAt(entry.getIdentifier(), 6).toString();
+                boolean shouldExclude = status.trim().equals("Claimed") && payment.trim().equals("Paid");
+                return !shouldExclude;
+            }
+        });
+    }
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         loadLaundryData();
+        filterLaundry();
         container.removeAll();
         container.repaint();
         container.revalidate();
@@ -1193,6 +1206,8 @@ public class Laundry_Interface extends javax.swing.JFrame {
 
     private void laundryBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laundryBActionPerformed
         loadLaundryData();
+        filterLaundry();
+        jPanel2.setVisible(true);
         contentPanel.removeAll();
         contentPanel.repaint();
         contentPanel.revalidate();
@@ -1202,7 +1217,14 @@ public class Laundry_Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_laundryBActionPerformed
 
     private void laundryLogBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laundryLogBActionPerformed
-        
+        loadLaundryData();
+        jPanel2.setVisible(false);
+        contentPanel.removeAll();
+        contentPanel.repaint();
+        contentPanel.revalidate();
+        contentPanel.add(laundryPanel);
+        contentPanel.repaint();
+        contentPanel.revalidate();
     }//GEN-LAST:event_laundryLogBActionPerformed
 
     private void settingsBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_settingsBActionPerformed
@@ -1215,7 +1237,14 @@ public class Laundry_Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_settingsBActionPerformed
 
     private void logoutBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutBActionPerformed
-        // TODO add your handling code here:
+        int response = JOptionPane.showConfirmDialog(null, 
+            "Are you sure you want to log out?", 
+            "Log Out", JOptionPane.YES_NO_OPTION);
+
+
+        if (response == JOptionPane.YES_OPTION) {
+            System.exit(0); // Close the application
+        }
     }//GEN-LAST:event_logoutBActionPerformed
 
     private void customerB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerB1ActionPerformed
