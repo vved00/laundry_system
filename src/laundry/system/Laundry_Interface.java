@@ -43,10 +43,9 @@ public class Laundry_Interface extends javax.swing.JFrame {
         navBar = new javax.swing.JPanel();
         logoutB = new javax.swing.JButton();
         laundryB = new javax.swing.JButton();
-        customerB = new javax.swing.JButton();
+        laundryLogB = new javax.swing.JButton();
         settingsB = new javax.swing.JButton();
         customerB1 = new javax.swing.JButton();
-        jPanel3 = new javax.swing.JPanel();
         contentPanel = new javax.swing.JPanel();
         laundryPanel = new javax.swing.JPanel();
         displayQueuePanel = new javax.swing.JPanel();
@@ -73,6 +72,26 @@ public class Laundry_Interface extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         dateNtime = new javax.swing.JTextField();
         cancelButton = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
+        paymentStats = new javax.swing.JComboBox<>();
+        qEditPanel = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        qOwnerName = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
+        qOwnerContact = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
+        qPrice = new javax.swing.JTextField();
+        qWeight = new javax.swing.JTextField();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        qRecievedTime = new javax.swing.JTextField();
+        qPaymentStatus = new javax.swing.JComboBox<>();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        qLaundryStatus = new javax.swing.JComboBox<>();
+        doneEditQueueB = new javax.swing.JButton();
+        cancelEditQueueB = new javax.swing.JButton();
         browseCustomer = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         browseCustomerTable = new javax.swing.JTable();
@@ -82,9 +101,6 @@ public class Laundry_Interface extends javax.swing.JFrame {
         addCustomer = new javax.swing.JButton();
         selectButton = new javax.swing.JButton();
         settingsPanel = new javax.swing.JPanel();
-        navBar3 = new javax.swing.JPanel();
-        UserAccount = new javax.swing.JButton();
-        SystemPreferences = new javax.swing.JButton();
         customerPanel = new javax.swing.JPanel();
         customerTablePanel = new javax.swing.JPanel();
         customerInformation = new javax.swing.JPanel();
@@ -171,7 +187,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(279, Short.MAX_VALUE)
+                .addContainerGap(500, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -187,7 +203,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(68, Short.MAX_VALUE)
+                .addContainerGap(90, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -222,13 +238,13 @@ public class Laundry_Interface extends javax.swing.JFrame {
         });
         navBar.add(laundryB, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 160, 40));
 
-        customerB.setText("Laundry Log");
-        customerB.addActionListener(new java.awt.event.ActionListener() {
+        laundryLogB.setText("Laundry Log");
+        laundryLogB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                customerBActionPerformed(evt);
+                laundryLogBActionPerformed(evt);
             }
         });
-        navBar.add(customerB, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 160, 40));
+        navBar.add(laundryLogB, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 160, 40));
 
         settingsB.setText("Settings");
         settingsB.addActionListener(new java.awt.event.ActionListener() {
@@ -245,19 +261,6 @@ public class Laundry_Interface extends javax.swing.JFrame {
             }
         });
         navBar.add(customerB1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 160, 40));
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 360, Short.MAX_VALUE)
-        );
-
-        navBar.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 360));
 
         Main_Interface.add(navBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 380));
 
@@ -278,6 +281,11 @@ public class Laundry_Interface extends javax.swing.JFrame {
 
         editQButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         editQButton.setText("Edit Queue");
+        editQButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editQButtonActionPerformed(evt);
+            }
+        });
         jPanel2.add(editQButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 20, 170, 30));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -322,7 +330,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
         displayQueuePanel.setLayout(displayQueuePanelLayout);
         displayQueuePanelLayout.setHorizontalGroup(
             displayQueuePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 997, Short.MAX_VALUE)
+            .addGap(0, 653, Short.MAX_VALUE)
             .addGroup(displayQueuePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(displayQueuePanelLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -367,12 +375,6 @@ public class Laundry_Interface extends javax.swing.JFrame {
         qAddPanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 110, 40));
         qAddPanel.add(weightText, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, 190, -1));
         qAddPanel.add(ownerContact, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, 190, -1));
-
-        ownerName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ownerNameActionPerformed(evt);
-            }
-        });
         qAddPanel.add(ownerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, 190, -1));
 
         browseCustomers.setText("Browse");
@@ -396,7 +398,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
         Price.setText("Total:");
         qAddPanel.add(Price, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 280, 150, 40));
 
-        serviceType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Wash Only", "Dry Only", "Wash and Dry" }));
+        serviceType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Service..", "Wash Only", "Dry Only", "Wash and Dry" }));
         serviceType.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 serviceTypeActionPerformed(evt);
@@ -411,12 +413,6 @@ public class Laundry_Interface extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel7.setText("Date");
         qAddPanel.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 110, 70, 40));
-
-        dateNtime.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dateNtimeActionPerformed(evt);
-            }
-        });
         qAddPanel.add(dateNtime, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 120, 190, -1));
 
         cancelButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -428,7 +424,91 @@ public class Laundry_Interface extends javax.swing.JFrame {
         });
         qAddPanel.add(cancelButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 120, 30));
 
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel10.setText("Payment Status");
+        qAddPanel.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 160, 110, 40));
+
+        paymentStats.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pending", "Paid" }));
+        qAddPanel.add(paymentStats, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 160, 150, 30));
+
         queuePanel.add(qAddPanel, "card2");
+
+        qEditPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel11.setText("Edit Queue");
+        jLabel11.setToolTipText("");
+        qEditPanel.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 650, 33));
+
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel12.setText("Price:");
+        qEditPanel.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 60, 30));
+
+        qOwnerName.setFocusable(false);
+        qEditPanel.add(qOwnerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 80, 220, 30));
+
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel13.setText("Name:");
+        qEditPanel.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 60, 30));
+
+        qOwnerContact.setFocusable(false);
+        qEditPanel.add(qOwnerContact, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 120, 220, 30));
+
+        jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel14.setText("Contact:");
+        qEditPanel.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 60, 30));
+
+        qPrice.setFocusable(false);
+        qEditPanel.add(qPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 200, 220, 30));
+
+        qWeight.setFocusable(false);
+        qEditPanel.add(qWeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, 220, 30));
+
+        jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel15.setText("Weight:");
+        qEditPanel.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 60, 30));
+
+        jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel16.setText("Laundry Status:");
+        qEditPanel.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 200, -1, 20));
+
+        qRecievedTime.setFocusable(false);
+        qEditPanel.add(qRecievedTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 120, 300, 30));
+
+        qPaymentStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pending", "Paid" }));
+        qEditPanel.add(qPaymentStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 160, 140, 30));
+
+        jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel17.setText("Recieved Time:");
+        qEditPanel.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 90, -1, 20));
+
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel18.setText("Payment Status:");
+        qEditPanel.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 160, -1, 20));
+
+        qLaundryStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Received", "Washing", "Drying", "Folded", "Claimed" }));
+        qEditPanel.add(qLaundryStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 200, 140, 30));
+
+        doneEditQueueB.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        doneEditQueueB.setText("Done");
+        doneEditQueueB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                doneEditQueueBActionPerformed(evt);
+            }
+        });
+        qEditPanel.add(doneEditQueueB, new org.netbeans.lib.awtextra.AbsoluteConstraints(465, 323, 170, 40));
+
+        cancelEditQueueB.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        cancelEditQueueB.setText("Cancel");
+        cancelEditQueueB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cancelEditQueueBActionPerformed(evt);
+            }
+        });
+        qEditPanel.add(cancelEditQueueB, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 330, 160, 40));
+
+        queuePanel.add(qEditPanel, "card4");
 
         browseCustomer.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -451,11 +531,6 @@ public class Laundry_Interface extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        browseCustomerTable.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                browseCustomerTableMouseClicked(evt);
-            }
-        });
         jScrollPane2.setViewportView(browseCustomerTable);
         if (browseCustomerTable.getColumnModel().getColumnCount() > 0) {
             browseCustomerTable.getColumnModel().getColumn(0).setResizable(false);
@@ -468,6 +543,12 @@ public class Laundry_Interface extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel8.setText("Search");
         browseCustomer.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 32, 52, 34));
+
+        browseCustomerSearch.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                browseCustomerSearchKeyPressed(evt);
+            }
+        });
         browseCustomer.add(browseCustomerSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(64, 39, 262, -1));
 
         jLabel9.setText("(if not existing, create new customer profile)");
@@ -496,49 +577,15 @@ public class Laundry_Interface extends javax.swing.JFrame {
 
         contentPanel.add(laundryPanel, "card2");
 
-        navBar3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        UserAccount.setText("User Account");
-        UserAccount.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                UserAccountMouseClicked(evt);
-            }
-        });
-        UserAccount.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                UserAccountActionPerformed(evt);
-            }
-        });
-        navBar3.add(UserAccount, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 160, 70));
-
-        SystemPreferences.setText("System Preferences");
-        SystemPreferences.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                SystemPreferencesMouseClicked(evt);
-            }
-        });
-        SystemPreferences.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SystemPreferencesActionPerformed(evt);
-            }
-        });
-        navBar3.add(SystemPreferences, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 160, 70));
-
         javax.swing.GroupLayout settingsPanelLayout = new javax.swing.GroupLayout(settingsPanel);
         settingsPanel.setLayout(settingsPanelLayout);
         settingsPanelLayout.setHorizontalGroup(
             settingsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, settingsPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(navBar3, javax.swing.GroupLayout.PREFERRED_SIZE, 895, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(90, 90, 90))
+            .addGap(0, 650, Short.MAX_VALUE)
         );
         settingsPanelLayout.setVerticalGroup(
             settingsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(settingsPanelLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(navBar3, javax.swing.GroupLayout.DEFAULT_SIZE, 326, Short.MAX_VALUE)
-                .addGap(29, 29, 29))
+            .addGap(0, 380, Short.MAX_VALUE)
         );
 
         contentPanel.add(settingsPanel, "card4");
@@ -552,11 +599,6 @@ public class Laundry_Interface extends javax.swing.JFrame {
         f_name.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 f_nameMouseClicked(evt);
-            }
-        });
-        f_name.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                f_nameActionPerformed(evt);
             }
         });
         f_name.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -574,11 +616,6 @@ public class Laundry_Interface extends javax.swing.JFrame {
                 l_nameMouseClicked(evt);
             }
         });
-        l_name.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                l_nameActionPerformed(evt);
-            }
-        });
         l_name.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 l_nameKeyReleased(evt);
@@ -590,11 +627,6 @@ public class Laundry_Interface extends javax.swing.JFrame {
         c_number.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 c_numberMouseClicked(evt);
-            }
-        });
-        c_number.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                c_numberActionPerformed(evt);
             }
         });
         c_number.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -674,11 +706,6 @@ public class Laundry_Interface extends javax.swing.JFrame {
         addCustomerBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         addCustomerBtn.setText("ADD");
         addCustomerBtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        addCustomerBtn.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                addCustomerBtnMouseClicked(evt);
-            }
-        });
         addCustomerBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addCustomerBtnActionPerformed(evt);
@@ -728,7 +755,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(customerTablePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(customerTablePanelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGap(0, 4, Short.MAX_VALUE)
                         .addComponent(addCustomerBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(editCustomerBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -748,32 +775,14 @@ public class Laundry_Interface extends javax.swing.JFrame {
 
         customerInformation1.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Customer Information", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
 
-        f_nameAdd.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                f_nameAddActionPerformed(evt);
-            }
-        });
-
         fnameLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         fnameLabel1.setText("First Name");
 
         lnameLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lnameLabel1.setText("Last Name");
 
-        l_nameAdd.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                l_nameAddActionPerformed(evt);
-            }
-        });
-
         cnumberLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         cnumberLabel1.setText("Contact Number");
-
-        c_numberAdd.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                c_numberAddActionPerformed(evt);
-            }
-        });
 
         addCancelBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         addCancelBtn.setText("CANCEL");
@@ -850,25 +859,19 @@ public class Laundry_Interface extends javax.swing.JFrame {
             .addGroup(customerAddPanelLayout.createSequentialGroup()
                 .addGap(102, 102, 102)
                 .addComponent(customerInformation1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(442, Short.MAX_VALUE))
+                .addContainerGap(107, Short.MAX_VALUE))
         );
         customerAddPanelLayout.setVerticalGroup(
             customerAddPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(customerAddPanelLayout.createSequentialGroup()
                 .addGap(62, 62, 62)
                 .addComponent(customerInformation1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(71, Short.MAX_VALUE))
+                .addContainerGap(78, Short.MAX_VALUE))
         );
 
         contentPanel.add(customerAddPanel, "card2");
 
         customerInformation2.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Customer Information", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
-
-        f_nameEdit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                f_nameEditActionPerformed(evt);
-            }
-        });
 
         fnameLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         fnameLabel2.setText("First Name");
@@ -876,20 +879,8 @@ public class Laundry_Interface extends javax.swing.JFrame {
         lnameLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lnameLabel2.setText("Last Name");
 
-        l_nameEdit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                l_nameEditActionPerformed(evt);
-            }
-        });
-
         cnumberLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         cnumberLabel2.setText("Contact Number");
-
-        c_numberEdit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                c_numberEditActionPerformed(evt);
-            }
-        });
 
         editCancelBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         editCancelBtn.setText("CANCEL");
@@ -914,7 +905,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
         customerInformation2Layout.setHorizontalGroup(
             customerInformation2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(customerInformation2Layout.createSequentialGroup()
-                .addContainerGap(58, Short.MAX_VALUE)
+                .addContainerGap(46, Short.MAX_VALUE)
                 .addComponent(editCancelBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(39, 39, 39)
                 .addComponent(editConfirmBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -961,12 +952,12 @@ public class Laundry_Interface extends javax.swing.JFrame {
             .addGroup(customerEditPanelLayout.createSequentialGroup()
                 .addGap(102, 102, 102)
                 .addComponent(customerInformation2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(442, Short.MAX_VALUE))
+                .addContainerGap(107, Short.MAX_VALUE))
         );
         customerEditPanelLayout.setVerticalGroup(
             customerEditPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, customerEditPanelLayout.createSequentialGroup()
-                .addContainerGap(67, Short.MAX_VALUE)
+                .addContainerGap(74, Short.MAX_VALUE)
                 .addComponent(customerInformation2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(66, 66, 66))
         );
@@ -978,11 +969,6 @@ public class Laundry_Interface extends javax.swing.JFrame {
         customerInformation3.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Customer Information", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
 
         f_nameDelete.setFocusable(false);
-        f_nameDelete.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                f_nameDeleteActionPerformed(evt);
-            }
-        });
 
         fnameLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         fnameLabel3.setText("First Name");
@@ -991,21 +977,11 @@ public class Laundry_Interface extends javax.swing.JFrame {
         lnameLabel3.setText("Last Name");
 
         l_nameDelete.setFocusable(false);
-        l_nameDelete.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                l_nameDeleteActionPerformed(evt);
-            }
-        });
 
         cnumberLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         cnumberLabel3.setText("Contact Number");
 
         c_numberDelete.setFocusable(false);
-        c_numberDelete.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                c_numberDeleteActionPerformed(evt);
-            }
-        });
 
         deleteCancelBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         deleteCancelBtn.setText("CANCEL");
@@ -1042,7 +1018,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
                     .addComponent(f_nameDelete))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(customerInformation3Layout.createSequentialGroup()
-                .addContainerGap(58, Short.MAX_VALUE)
+                .addContainerGap(46, Short.MAX_VALUE)
                 .addComponent(deleteCancelBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(39, 39, 39)
                 .addComponent(deleteConfirmBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1077,14 +1053,14 @@ public class Laundry_Interface extends javax.swing.JFrame {
             .addGroup(customerDeletePanelLayout.createSequentialGroup()
                 .addGap(104, 104, 104)
                 .addComponent(customerInformation3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(440, Short.MAX_VALUE))
+                .addContainerGap(105, Short.MAX_VALUE))
         );
         customerDeletePanelLayout.setVerticalGroup(
             customerDeletePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(customerDeletePanelLayout.createSequentialGroup()
                 .addGap(58, 58, 58)
                 .addComponent(customerInformation3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(75, Short.MAX_VALUE))
+                .addContainerGap(82, Short.MAX_VALUE))
         );
 
         contentPanel.add(customerDeletePanel, "card2");
@@ -1100,6 +1076,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
     
     // functions
     static int selectedCustomer_id;
+    static int selectedLaundry_id;
     private TableRowSorter<DefaultTableModel> tableRowSorter;
     private void loadCustomerData() {
         DefaultTableModel tableModel = LaundrySystem.getCustomerTableModel();
@@ -1117,7 +1094,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
             browseCustomerTable.getColumnModel().removeColumn(browseCustomerTable.getColumnModel().getColumn(0));
         }
     }
-    
+    // get laundry data
     private void loadLaundryData(){
         DefaultTableModel tableModel = LaundrySystem.getLaundryLog();
         laundryTable.setModel(tableModel);
@@ -1127,23 +1104,57 @@ public class Laundry_Interface extends javax.swing.JFrame {
             laundryTable.getColumnModel().removeColumn(laundryTable.getColumnModel().getColumn(0));
         }
     }
-        
+    // get service type
     private int fetchService(){
         Object selected = serviceType.getSelectedItem(); 
-        int service = 0;
         switch(selected.toString()){
             case "Wash and Dry":
-                service = 1;
-                break;
+                return 1;
             case "Wash Only":
-                service = 2;
-                break;
+                return 2;
             case "Dry Only":
-                service = 3;
+                return 3;
+            case "Select Service..":
+                JOptionPane.showMessageDialog(null, "Invalid service selected! Please choose a valid service.", "Selection Error", JOptionPane.ERROR_MESSAGE);
         }
-        return service;
+        return 0;
     }
-    
+    // get payment status
+    private int fetchPaymentStat(int flag){
+        if (flag == 1){
+            Object stat = paymentStats.getSelectedItem(); 
+            if(stat.toString().equals("Paid")){
+                return 1;
+            } else {
+                return 2;
+            }
+        } else {
+            Object stat = qPaymentStatus.getSelectedItem(); 
+            if(stat.toString().equals("Paid")){
+                return 1;
+            } else {
+                return 2;
+            }
+        }
+    }
+    // get laundry status
+    private int fetchLaundryStat(){
+        Object stat = qLaundryStatus.getSelectedItem();
+        switch(stat.toString()){
+            case "Received":
+                return 1;
+            case "Washing":
+                return 2;
+            case "Drying":
+                return 3;
+            case "Folded":
+                return 4;
+            case "Claimed":
+                return 5;
+        }
+        return 0;
+    }
+    // search
     private void applyFilter(String query) {
         if (query.isEmpty()) {
             tableRowSorter.setRowFilter(null); // Show all rows
@@ -1190,9 +1201,9 @@ public class Laundry_Interface extends javax.swing.JFrame {
         contentPanel.revalidate();     
     }//GEN-LAST:event_laundryBActionPerformed
 
-    private void customerBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerBActionPerformed
- 
-    }//GEN-LAST:event_customerBActionPerformed
+    private void laundryLogBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laundryLogBActionPerformed
+        
+    }//GEN-LAST:event_laundryLogBActionPerformed
 
     private void settingsBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_settingsBActionPerformed
         contentPanel.removeAll();
@@ -1200,20 +1211,11 @@ public class Laundry_Interface extends javax.swing.JFrame {
         contentPanel.revalidate();
         contentPanel.add(settingsPanel);
         contentPanel.repaint();
-        contentPanel.revalidate(); 
+        contentPanel.revalidate();  
     }//GEN-LAST:event_settingsBActionPerformed
 
     private void logoutBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutBActionPerformed
-             int response = JOptionPane.showConfirmDialog(null, 
-            "Are you sure you want to log out?", 
-            "Log Out", JOptionPane.YES_NO_OPTION);
-
-    // If the user clicks 'Yes', exit the application
-    if (response == JOptionPane.YES_OPTION) {
-        System.exit(0); // Close the application
-    }
-
-
+        // TODO add your handling code here:
     }//GEN-LAST:event_logoutBActionPerformed
 
     private void customerB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerB1ActionPerformed
@@ -1226,18 +1228,6 @@ public class Laundry_Interface extends javax.swing.JFrame {
         contentPanel.revalidate();
     }//GEN-LAST:event_customerB1ActionPerformed
 
-    private void f_nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_f_nameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_f_nameActionPerformed
-
-    private void l_nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_l_nameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_l_nameActionPerformed
-
-    private void c_numberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c_numberActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_c_numberActionPerformed
-
     private void addCustomerBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addCustomerBtnActionPerformed
         contentPanel.removeAll();
         contentPanel.repaint();
@@ -1246,18 +1236,6 @@ public class Laundry_Interface extends javax.swing.JFrame {
         contentPanel.repaint();
         contentPanel.revalidate();
     }//GEN-LAST:event_addCustomerBtnActionPerformed
-
-    private void f_nameAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_f_nameAddActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_f_nameAddActionPerformed
-
-    private void l_nameAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_l_nameAddActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_l_nameAddActionPerformed
-
-    private void c_numberAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c_numberAddActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_c_numberAddActionPerformed
 
     private void addConfirmBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addConfirmBtnActionPerformed
         String fname = f_nameAdd.getText();
@@ -1296,18 +1274,6 @@ public class Laundry_Interface extends javax.swing.JFrame {
         contentPanel.revalidate();
     }//GEN-LAST:event_addCancelBtnActionPerformed
 
-    private void f_nameEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_f_nameEditActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_f_nameEditActionPerformed
-
-    private void l_nameEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_l_nameEditActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_l_nameEditActionPerformed
-
-    private void c_numberEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c_numberEditActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_c_numberEditActionPerformed
-
     private void editCancelBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editCancelBtnActionPerformed
         contentPanel.removeAll();
         contentPanel.repaint();
@@ -1343,18 +1309,6 @@ public class Laundry_Interface extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "All fields must be filled out!");
         }
     }//GEN-LAST:event_editConfirmBtnActionPerformed
-
-    private void f_nameDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_f_nameDeleteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_f_nameDeleteActionPerformed
-
-    private void l_nameDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_l_nameDeleteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_l_nameDeleteActionPerformed
-
-    private void c_numberDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c_numberDeleteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_c_numberDeleteActionPerformed
 
     private void deleteCancelBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteCancelBtnActionPerformed
         contentPanel.removeAll();
@@ -1405,10 +1359,6 @@ public class Laundry_Interface extends javax.swing.JFrame {
         contentPanel.revalidate();
     }//GEN-LAST:event_deleteCustomerBtnActionPerformed
 
-    private void addCustomerBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addCustomerBtnMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_addCustomerBtnMouseClicked
-
     private void customerTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_customerTableMouseClicked
         int row = customerTable.getSelectedRow();
         // retrieve data from the model
@@ -1458,9 +1408,17 @@ public class Laundry_Interface extends javax.swing.JFrame {
 
     private void serviceTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_serviceTypeActionPerformed
         int service = fetchService();
-        Float service_fee = LaundrySystem.fetchServiceFee(service);
-        Float price =  service_fee * Float.parseFloat(weightText.getText());
-        Price.setText("Total: " + price);
+        float service_fee = LaundrySystem.fetchServiceFee(service);
+        try {
+            float weight = Float.parseFloat(weightText.getText().trim());
+            float price = service_fee * weight;
+            Price.setText("Total: " + price);
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Invalid input! Please enter a valid number for weight.", "Input Error", JOptionPane.ERROR_MESSAGE);
+            weightText.setText("");
+            Price.setText("Total: ");
+            weightText.requestFocus();
+        }
     }//GEN-LAST:event_serviceTypeActionPerformed
 
     private void addQButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addQButtonActionPerformed
@@ -1475,25 +1433,33 @@ public class Laundry_Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_addQButtonActionPerformed
 
     private void doneButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_doneButtonActionPerformed
-        float weight = Float.parseFloat(weightText.getText());
-        String date = dateNtime.getText();
-        int service = fetchService();
-        
-        boolean isAdded = LaundrySystem.addQueue(selectedCustomer_id, weight, service, date, 1);
-        if (isAdded) {
-            JOptionPane.showMessageDialog(this, "New Queue added successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
+        try {
+            float weight = Float.parseFloat(weightText.getText());
+            String date = dateNtime.getText();
+            int service = fetchService();
+            int payment_status = fetchPaymentStat(1);
+
+            boolean isAdded = LaundrySystem.addQueue(selectedCustomer_id, weight, service, payment_status, date, 1);
+            if (isAdded) {
+                JOptionPane.showMessageDialog(this, "New Queue added successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
+                weightText.setText("");
+                ownerName.setText("");
+                ownerContact.setText("");
+                loadLaundryData();
+                laundryPanel.removeAll();
+                laundryPanel.repaint();
+                laundryPanel.revalidate();
+                laundryPanel.add(displayQueuePanel);
+                laundryPanel.repaint();
+                laundryPanel.revalidate();
+            } else {
+                JOptionPane.showMessageDialog(this, "Failed to add customer. Please try again.", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } catch (Exception e){
+            JOptionPane.showMessageDialog(null, "Invalid input! Please enter a valid number for weight.", "Input Error", JOptionPane.ERROR_MESSAGE);
             weightText.setText("");
-            ownerName.setText("");
-            ownerContact.setText("");
-            loadLaundryData();
-            laundryPanel.removeAll();
-            laundryPanel.repaint();
-            laundryPanel.revalidate();
-            laundryPanel.add(displayQueuePanel);
-            laundryPanel.repaint();
-            laundryPanel.revalidate();
-        } else {
-            JOptionPane.showMessageDialog(this, "Failed to add customer. Please try again.", "Error", JOptionPane.ERROR_MESSAGE);
+            Price.setText("Total: ");
+            weightText.requestFocus();
         }
     }//GEN-LAST:event_doneButtonActionPerformed
 
@@ -1525,14 +1491,6 @@ public class Laundry_Interface extends javax.swing.JFrame {
         contentPanel.revalidate();
     }//GEN-LAST:event_addCustomerActionPerformed
 
-    private void browseCustomerTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_browseCustomerTableMouseClicked
-
-    }//GEN-LAST:event_browseCustomerTableMouseClicked
-
-    private void ownerNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ownerNameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ownerNameActionPerformed
-
     private void selectButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectButtonActionPerformed
         int row = browseCustomerTable.getSelectedRow();
         // retrieve data from the model
@@ -1551,50 +1509,89 @@ public class Laundry_Interface extends javax.swing.JFrame {
         queuePanel.revalidate();
     }//GEN-LAST:event_selectButtonActionPerformed
 
-    private void dateNtimeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dateNtimeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_dateNtimeActionPerformed
+    private void browseCustomerSearchKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_browseCustomerSearchKeyPressed
+        String query = browseCustomerSearch.getText().trim();
+        applyFilter(query);
+    }//GEN-LAST:event_browseCustomerSearchKeyPressed
 
-    private void UserAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UserAccountActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_UserAccountActionPerformed
+    private void editQButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editQButtonActionPerformed
+        int row = laundryTable.getSelectedRow(); 
+        int modelRow = laundryTable.convertRowIndexToModel(row);
+        selectedLaundry_id = (int) laundryTable.getModel().getValueAt(modelRow, 0);
+        if (row != -1) { 
+            laundryPanel.removeAll();
+            laundryPanel.repaint();
+            laundryPanel.revalidate();
+            laundryPanel.add(qEditPanel);
+            laundryPanel.repaint();
+            laundryPanel.revalidate();
+            String name = laundryTable.getValueAt(row, 0).toString();
+            String contact = laundryTable.getValueAt(row, 1).toString();
+            String weight = laundryTable.getValueAt(row, 2).toString();
+            String price = laundryTable.getValueAt(row, 3).toString();
+            String date = laundryTable.getValueAt(row, 6).toString();
+            qOwnerName.setText(name);
+            qOwnerContact.setText(contact);
+            qWeight.setText(weight);
+            qPrice.setText(price);
+            qRecievedTime.setText(date);
+            qPaymentStatus.setSelectedItem(laundryTable.getValueAt(row, 5)); // combo box
+            qLaundryStatus.setSelectedItem(laundryTable.getValueAt(row, 7));
+        } else { 
+            JOptionPane.showMessageDialog(queueTable, "Please select a row to edit."); 
+        }
+    }//GEN-LAST:event_editQButtonActionPerformed
 
-    private void SystemPreferencesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SystemPreferencesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_SystemPreferencesActionPerformed
+    private void cancelEditQueueBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelEditQueueBActionPerformed
+        qOwnerName.setText("");
+        qOwnerContact.setText("");
+        qWeight.setText("");
+        qPrice.setText("");
+        qRecievedTime.setText("");
+        qLaundryStatus.setSelectedItem("");
+        qPaymentStatus.setSelectedItem("");
+        
+        laundryPanel.removeAll();
+        laundryPanel.repaint();
+        laundryPanel.revalidate();
+        laundryPanel.add(displayQueuePanel);
+        laundryPanel.repaint();
+        laundryPanel.revalidate();
+    }//GEN-LAST:event_cancelEditQueueBActionPerformed
 
-    private void UserAccountMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UserAccountMouseClicked
-       
-    Object[] options = {"Update Profile", "Change Password", "Cancel"};
-    
-    // Show the dialog
-    int choice = JOptionPane.showOptionDialog(this,
-            "What would you like to do?",
-            "User Account",
-            JOptionPane.YES_NO_CANCEL_OPTION,
-            JOptionPane.QUESTION_MESSAGE,
-            null, options, options[2]); // Default button is "Cancel"
-    
-    // Handle the user's choice
-    switch (choice) {
-        case JOptionPane.YES_OPTION:
-            // Open the Update Profile functionality
-            UserAccountDialog.showUpdateProfileDialog(this);
-            break;
-        case JOptionPane.NO_OPTION:
-            // Open the Change Password functionality
-            UserAccountDialog.showChangePasswordDialog(this);
-            break;
-        default:
-            // User clicked "Cancel" or closed the dialog
-            break;
-    }
+    private void doneEditQueueBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_doneEditQueueBActionPerformed
+        int laundry_id = selectedLaundry_id;
+        int payment_status = fetchPaymentStat(2);
+        int laundry_status = fetchLaundryStat();
+        boolean isEdited = false;
+        if (laundry_status == 5){
+            String dNt = LaundrySystem.getDateNTime();
+            isEdited = LaundrySystem.editQueue(laundry_id, payment_status, laundry_status, dNt);
+        } else {
+            isEdited = LaundrySystem.editQueue(laundry_id, payment_status, laundry_status, null);
+        }
+        
+        if (isEdited) {
+            JOptionPane.showMessageDialog(this, "Queue is edited successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
+            qOwnerName.setText("");
+            qOwnerContact.setText("");
+            qWeight.setText("");
+            qPrice.setText("");
+            qRecievedTime.setText("");
+            qLaundryStatus.setSelectedItem("");
+            qPaymentStatus.setSelectedItem("");
 
-    }//GEN-LAST:event_UserAccountMouseClicked
-
-    private void SystemPreferencesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SystemPreferencesMouseClicked
-        SystemPreferencesDialog.showSystemPreferencesDialog(this);
-    }//GEN-LAST:event_SystemPreferencesMouseClicked
+            loadLaundryData();
+            laundryPanel.removeAll();
+            laundryPanel.repaint();
+            laundryPanel.revalidate();
+            laundryPanel.add(displayQueuePanel);
+            laundryPanel.repaint();
+            laundryPanel.revalidate();
+        } else {
+            JOptionPane.showMessageDialog(this, "Failed to add customer. Please try again.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_doneEditQueueBActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1635,8 +1632,6 @@ public class Laundry_Interface extends javax.swing.JFrame {
     private javax.swing.JPanel Login_page;
     private javax.swing.JPanel Main_Interface;
     private javax.swing.JLabel Price;
-    private javax.swing.JButton SystemPreferences;
-    private javax.swing.JButton UserAccount;
     private javax.swing.JButton addCancelBtn;
     private javax.swing.JButton addConfirmBtn;
     private javax.swing.JButton addCustomer;
@@ -1652,6 +1647,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
     private javax.swing.JTextField c_numberDelete;
     private javax.swing.JTextField c_numberEdit;
     private javax.swing.JButton cancelButton;
+    private javax.swing.JButton cancelEditQueueB;
     private javax.swing.JLabel cnumberLabel;
     private javax.swing.JLabel cnumberLabel1;
     private javax.swing.JLabel cnumberLabel2;
@@ -1659,7 +1655,6 @@ public class Laundry_Interface extends javax.swing.JFrame {
     private javax.swing.JPanel container;
     private javax.swing.JPanel contentPanel;
     private javax.swing.JPanel customerAddPanel;
-    private javax.swing.JButton customerB;
     private javax.swing.JButton customerB1;
     private javax.swing.JPanel customerDeletePanel;
     private javax.swing.JPanel customerEditPanel;
@@ -1676,6 +1671,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
     private javax.swing.JButton deleteCustomerBtn;
     private javax.swing.JPanel displayQueuePanel;
     private javax.swing.JButton doneButton;
+    private javax.swing.JButton doneEditQueueB;
     private javax.swing.JButton editCancelBtn;
     private javax.swing.JButton editConfirmBtn;
     private javax.swing.JButton editCustomerBtn;
@@ -1690,6 +1686,15 @@ public class Laundry_Interface extends javax.swing.JFrame {
     private javax.swing.JLabel fnameLabel3;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -1700,7 +1705,6 @@ public class Laundry_Interface extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jSrollPane2;
@@ -1711,6 +1715,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
     private javax.swing.JTextField l_nameDelete;
     private javax.swing.JTextField l_nameEdit;
     private javax.swing.JButton laundryB;
+    private javax.swing.JButton laundryLogB;
     private javax.swing.JPanel laundryPanel;
     private javax.swing.JTable laundryTable;
     private javax.swing.JLabel lnameLabel;
@@ -1719,10 +1724,18 @@ public class Laundry_Interface extends javax.swing.JFrame {
     private javax.swing.JLabel lnameLabel3;
     private javax.swing.JButton logoutB;
     private javax.swing.JPanel navBar;
-    private javax.swing.JPanel navBar3;
     private javax.swing.JTextField ownerContact;
     private javax.swing.JTextField ownerName;
+    private javax.swing.JComboBox<String> paymentStats;
     private javax.swing.JPanel qAddPanel;
+    private javax.swing.JPanel qEditPanel;
+    private javax.swing.JComboBox<String> qLaundryStatus;
+    private javax.swing.JTextField qOwnerContact;
+    private javax.swing.JTextField qOwnerName;
+    private javax.swing.JComboBox<String> qPaymentStatus;
+    private javax.swing.JTextField qPrice;
+    private javax.swing.JTextField qRecievedTime;
+    private javax.swing.JTextField qWeight;
     private javax.swing.JPanel queuePanel;
     private javax.swing.JPanel queueTable;
     private javax.swing.JButton selectButton;
