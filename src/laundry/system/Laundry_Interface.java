@@ -104,6 +104,8 @@ public class Laundry_Interface extends javax.swing.JFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         logTable = new javax.swing.JTable();
         jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        searchBar = new javax.swing.JTextField();
         settingsPanel = new javax.swing.JPanel();
         customerPanel = new javax.swing.JPanel();
         customerTablePanel = new javax.swing.JPanel();
@@ -172,6 +174,8 @@ public class Laundry_Interface extends javax.swing.JFrame {
 
         Login_page.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel1.setBackground(new java.awt.Color(204, 255, 255));
+
         jButton1.setText("LOGIN");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -222,58 +226,71 @@ public class Laundry_Interface extends javax.swing.JFrame {
 
         container.add(Login_page, "card2");
 
+        Main_Interface.setBackground(new java.awt.Color(204, 255, 255));
         Main_Interface.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        navBar.setBackground(new java.awt.Color(204, 204, 255));
         navBar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        logoutB.setBackground(new java.awt.Color(242, 242, 242));
         logoutB.setText("Logout");
         logoutB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 logoutBActionPerformed(evt);
             }
         });
-        navBar.add(logoutB, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 160, 40));
+        navBar.add(logoutB, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 130, 40));
 
+        laundryB.setBackground(new java.awt.Color(242, 242, 242));
         laundryB.setText("Laundry");
         laundryB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 laundryBActionPerformed(evt);
             }
         });
-        navBar.add(laundryB, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 160, 40));
+        navBar.add(laundryB, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 130, 40));
 
+        laundryLogB.setBackground(new java.awt.Color(242, 242, 242));
         laundryLogB.setText("Laundry Log");
         laundryLogB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 laundryLogBActionPerformed(evt);
             }
         });
-        navBar.add(laundryLogB, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 160, 40));
+        navBar.add(laundryLogB, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 130, 40));
 
+        settingsB.setBackground(new java.awt.Color(242, 242, 242));
         settingsB.setText("Settings");
         settingsB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 settingsBActionPerformed(evt);
             }
         });
-        navBar.add(settingsB, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 160, 40));
+        navBar.add(settingsB, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 130, 40));
 
+        customerB1.setBackground(new java.awt.Color(242, 242, 242));
         customerB1.setText("Customer Log");
         customerB1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 customerB1ActionPerformed(evt);
             }
         });
-        navBar.add(customerB1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 160, 40));
+        navBar.add(customerB1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 130, 40));
 
         Main_Interface.add(navBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 380));
 
+        contentPanel.setBackground(new java.awt.Color(204, 255, 255));
+        contentPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         contentPanel.setLayout(new java.awt.CardLayout());
 
         laundryPanel.setLayout(new java.awt.CardLayout());
 
+        displayQueuePanel.setBackground(new java.awt.Color(204, 255, 255));
+
+        jPanel2.setBackground(new java.awt.Color(204, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        addQButton.setBackground(new java.awt.Color(242, 242, 242));
         addQButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         addQButton.setText("Add Queue");
         addQButton.addActionListener(new java.awt.event.ActionListener() {
@@ -283,6 +300,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
         });
         jPanel2.add(addQButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 20, 170, 30));
 
+        editQButton.setBackground(new java.awt.Color(242, 242, 242));
         editQButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         editQButton.setText("Edit Queue");
         editQButton.addActionListener(new java.awt.event.ActionListener() {
@@ -294,8 +312,9 @@ public class Laundry_Interface extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel2.setText("LAUNDRY QUEUE");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, 160, 40));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 160, 40));
 
+        queueTable.setBackground(new java.awt.Color(204, 255, 255));
         queueTable.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         laundryTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -328,13 +347,13 @@ public class Laundry_Interface extends javax.swing.JFrame {
             laundryTable.getColumnModel().getColumn(6).setResizable(false);
         }
 
-        queueTable.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(4, 6, 640, 310));
+        queueTable.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 630, 280));
 
         javax.swing.GroupLayout displayQueuePanelLayout = new javax.swing.GroupLayout(displayQueuePanel);
         displayQueuePanel.setLayout(displayQueuePanelLayout);
         displayQueuePanelLayout.setHorizontalGroup(
             displayQueuePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 653, Short.MAX_VALUE)
+            .addGap(0, 658, Short.MAX_VALUE)
             .addGroup(displayQueuePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(displayQueuePanelLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -347,7 +366,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
         );
         displayQueuePanelLayout.setVerticalGroup(
             displayQueuePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 380, Short.MAX_VALUE)
+            .addGap(0, 378, Short.MAX_VALUE)
             .addGroup(displayQueuePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(displayQueuePanelLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -361,14 +380,17 @@ public class Laundry_Interface extends javax.swing.JFrame {
 
         laundryPanel.add(displayQueuePanel, "card2");
 
+        queuePanel.setBackground(new java.awt.Color(204, 255, 255));
         queuePanel.setLayout(new java.awt.CardLayout());
 
+        qAddPanel.setBackground(new java.awt.Color(204, 255, 255));
         qAddPanel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         qAddPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Add Queue");
-        qAddPanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 0, 90, 30));
+        qAddPanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 650, 30));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setText("Service Type");
@@ -389,6 +411,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
         });
         qAddPanel.add(browseCustomers, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, -1, -1));
 
+        doneButton.setBackground(new java.awt.Color(242, 242, 242));
         doneButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         doneButton.setText("Done");
         doneButton.addActionListener(new java.awt.event.ActionListener() {
@@ -419,6 +442,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
         qAddPanel.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 110, 70, 40));
         qAddPanel.add(dateNtime, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 120, 190, -1));
 
+        cancelButton.setBackground(new java.awt.Color(242, 242, 242));
         cancelButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         cancelButton.setText("Cancel");
         cancelButton.addActionListener(new java.awt.event.ActionListener() {
@@ -437,6 +461,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
 
         queuePanel.add(qAddPanel, "card2");
 
+        qEditPanel.setBackground(new java.awt.Color(204, 255, 255));
         qEditPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -514,6 +539,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
 
         queuePanel.add(qEditPanel, "card4");
 
+        browseCustomer.setBackground(new java.awt.Color(204, 255, 255));
         browseCustomer.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         browseCustomerTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -581,6 +607,9 @@ public class Laundry_Interface extends javax.swing.JFrame {
 
         contentPanel.add(laundryPanel, "card2");
 
+        laundryLog.setBackground(new java.awt.Color(204, 255, 255));
+        laundryLog.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         logTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -594,47 +623,44 @@ public class Laundry_Interface extends javax.swing.JFrame {
         ));
         jScrollPane3.setViewportView(logTable);
 
+        laundryLog.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(14, 74, 625, 286));
+
         jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel19.setText("Laundry Queue");
+        laundryLog.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(14, 6, 243, 23));
 
-        javax.swing.GroupLayout laundryLogLayout = new javax.swing.GroupLayout(laundryLog);
-        laundryLog.setLayout(laundryLogLayout);
-        laundryLogLayout.setHorizontalGroup(
-            laundryLogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(laundryLogLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(laundryLogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 625, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(14, Short.MAX_VALUE))
-        );
-        laundryLogLayout.setVerticalGroup(
-            laundryLogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, laundryLogLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20))
-        );
+        jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel20.setText("Search:");
+        laundryLog.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(14, 35, 61, 27));
+
+        searchBar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                searchBarKeyPressed(evt);
+            }
+        });
+        laundryLog.add(searchBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, 260, -1));
 
         contentPanel.add(laundryLog, "card8");
+
+        settingsPanel.setBackground(new java.awt.Color(204, 255, 255));
 
         javax.swing.GroupLayout settingsPanelLayout = new javax.swing.GroupLayout(settingsPanel);
         settingsPanel.setLayout(settingsPanelLayout);
         settingsPanelLayout.setHorizontalGroup(
             settingsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 653, Short.MAX_VALUE)
+            .addGap(0, 658, Short.MAX_VALUE)
         );
         settingsPanelLayout.setVerticalGroup(
             settingsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 380, Short.MAX_VALUE)
+            .addGap(0, 378, Short.MAX_VALUE)
         );
 
         contentPanel.add(settingsPanel, "card4");
 
+        customerPanel.setBackground(new java.awt.Color(204, 255, 255));
         customerPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        customerTablePanel.setBackground(new java.awt.Color(204, 255, 255));
         customerTablePanel.setPreferredSize(new java.awt.Dimension(650, 380));
 
         customerInformation.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Customer Information", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 12))); // NOI18N
@@ -814,8 +840,10 @@ public class Laundry_Interface extends javax.swing.JFrame {
 
         contentPanel.add(customerPanel, "card3");
 
+        customerAddPanel.setBackground(new java.awt.Color(204, 255, 255));
         customerAddPanel.setPreferredSize(new java.awt.Dimension(650, 380));
 
+        customerInformation1.setBackground(new java.awt.Color(204, 255, 255));
         customerInformation1.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Customer Information", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
 
         fnameLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -902,18 +930,21 @@ public class Laundry_Interface extends javax.swing.JFrame {
             .addGroup(customerAddPanelLayout.createSequentialGroup()
                 .addGap(102, 102, 102)
                 .addComponent(customerInformation1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(110, Short.MAX_VALUE))
+                .addContainerGap(115, Short.MAX_VALUE))
         );
         customerAddPanelLayout.setVerticalGroup(
             customerAddPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(customerAddPanelLayout.createSequentialGroup()
                 .addGap(62, 62, 62)
                 .addComponent(customerInformation1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(78, Short.MAX_VALUE))
+                .addContainerGap(76, Short.MAX_VALUE))
         );
 
         contentPanel.add(customerAddPanel, "card2");
 
+        customerEditPanel.setBackground(new java.awt.Color(204, 255, 255));
+
+        customerInformation2.setBackground(new java.awt.Color(204, 255, 255));
         customerInformation2.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Customer Information", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
 
         fnameLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -995,20 +1026,22 @@ public class Laundry_Interface extends javax.swing.JFrame {
             .addGroup(customerEditPanelLayout.createSequentialGroup()
                 .addGap(102, 102, 102)
                 .addComponent(customerInformation2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(110, Short.MAX_VALUE))
+                .addContainerGap(115, Short.MAX_VALUE))
         );
         customerEditPanelLayout.setVerticalGroup(
             customerEditPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, customerEditPanelLayout.createSequentialGroup()
-                .addContainerGap(74, Short.MAX_VALUE)
+                .addContainerGap(72, Short.MAX_VALUE)
                 .addComponent(customerInformation2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(66, 66, 66))
         );
 
         contentPanel.add(customerEditPanel, "card2");
 
+        customerDeletePanel.setBackground(new java.awt.Color(204, 255, 255));
         customerDeletePanel.setPreferredSize(new java.awt.Dimension(650, 380));
 
+        customerInformation3.setBackground(new java.awt.Color(204, 255, 255));
         customerInformation3.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Customer Information", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
 
         f_nameDelete.setFocusable(false);
@@ -1096,19 +1129,19 @@ public class Laundry_Interface extends javax.swing.JFrame {
             .addGroup(customerDeletePanelLayout.createSequentialGroup()
                 .addGap(104, 104, 104)
                 .addComponent(customerInformation3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(108, Short.MAX_VALUE))
+                .addContainerGap(113, Short.MAX_VALUE))
         );
         customerDeletePanelLayout.setVerticalGroup(
             customerDeletePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(customerDeletePanelLayout.createSequentialGroup()
                 .addGap(58, 58, 58)
                 .addComponent(customerInformation3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(82, Short.MAX_VALUE))
+                .addContainerGap(80, Short.MAX_VALUE))
         );
 
         contentPanel.add(customerDeletePanel, "card2");
 
-        Main_Interface.add(contentPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, 650, 380));
+        Main_Interface.add(contentPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, 660, 380));
 
         container.add(Main_Interface, "card3");
 
@@ -1153,9 +1186,9 @@ public class Laundry_Interface extends javax.swing.JFrame {
         DefaultTableModel tableModel = LaundrySystem.laundryLog();
         logTable.setModel(tableModel);
         tableRowSorter = new TableRowSorter<>(tableModel);
-        laundryTable.setRowSorter(tableRowSorter);
-        if (laundryTable.getColumnModel().getColumnCount() > 3) {
-            laundryTable.getColumnModel().removeColumn(laundryTable.getColumnModel().getColumn(0));
+        logTable.setRowSorter(tableRowSorter);
+        if (logTable.getColumnModel().getColumnCount() > 3) {
+            logTable.getColumnModel().removeColumn(logTable.getColumnModel().getColumn(0));
         }
     }
     // get service type
@@ -1217,7 +1250,15 @@ public class Laundry_Interface extends javax.swing.JFrame {
             // Filters columns 1 (First Name), 2 (Last Name), and 3 (Contact Number)
         }
     }
-
+    // log search
+    private void logSearch(String query){
+        if (query.isEmpty()) {
+            tableRowSorter.setRowFilter(null); // Show all rows
+        } else {
+            tableRowSorter.setRowFilter(RowFilter.regexFilter("(?i)" + query, 1, 2, 3, 4, 5, 6, 7, 8, 9)); 
+            // Filters columns 1 (First Name), 2 (Last Name), and 3 (Contact Number)
+        }
+    }
     private void clearSelectedCustomer(){
         f_name.setText("");
         l_name.setText("");
@@ -1529,6 +1570,9 @@ public class Laundry_Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_doneButtonActionPerformed
 
     private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
+        weightText.setText("");
+        ownerName.setText("");
+        ownerContact.setText("");
         laundryPanel.removeAll();
         laundryPanel.repaint();
         laundryPanel.revalidate();
@@ -1658,6 +1702,11 @@ public class Laundry_Interface extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_doneEditQueueBActionPerformed
 
+    private void searchBarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchBarKeyPressed
+        String query = searchBar.getText().trim();
+        logSearch(query);
+    }//GEN-LAST:event_searchBarKeyPressed
+
     /**
      * @param args the command line arguments
      */
@@ -1762,6 +1811,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -1807,6 +1857,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
     private javax.swing.JTextField qWeight;
     private javax.swing.JPanel queuePanel;
     private javax.swing.JPanel queueTable;
+    private javax.swing.JTextField searchBar;
     private javax.swing.JButton selectButton;
     private javax.swing.JComboBox<String> serviceType;
     private javax.swing.JButton settingsB;
