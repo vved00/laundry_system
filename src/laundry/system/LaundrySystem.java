@@ -182,6 +182,21 @@ public class LaundrySystem {
             return false;
         }
     }
+    // edit queue
+    public static boolean editQueue(int laundry_id, int payment_status, int laundry_status, String dNt){
+        String query = "UPDATE laundry_log SET laundry_claimed_time = ?, laundry_status = ?, payment_status = ? WHERE laundry_id = ?";
+        try (PreparedStatement pst = conn.prepareStatement(query)){
+            pst.setString(1, dNt);
+            pst.setInt(2, laundry_status);
+            pst.setInt(3, payment_status);
+            pst.setInt(4, laundry_id);
+            return pst.executeUpdate() > 0;
+        } catch (SQLException ex) {
+            Logger.getLogger(LaundrySystem.class.getName()).log(Level.SEVERE, "Error editing customer", ex);
+            return false;
+        }
+    }
+
     // get service fee
     public static float fetchServiceFee(int service){
         String query = "SELECT * FROM services " + "WHERE services.service_id = ?";
