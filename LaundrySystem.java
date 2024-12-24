@@ -30,13 +30,30 @@ public class LaundrySystem {
         
         if (connect()) {
             System.out.println("Database connected successfully!");
+            fetchData(conn);
         } else{
             System.err.println("Database connection failed: ");
         }
         new Laundry_Interface().setVisible(true);
         
     }
-  
+    
+     
+    // testing method
+    private static void fetchData(Connection connection) {
+        String query = "SELECT * FROM accounts";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(query);
+             ResultSet resultSet = preparedStatement.executeQuery()) {
+            
+            while (resultSet.next()) {
+                System.out.println("First Name: " + resultSet.getString("first_name"));
+                System.out.println("Lat Name: " + resultSet.getString("last_name"));
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Error executing query: " + e.getMessage());
+        }
+    }  
     // db connection
     public static boolean connect() {
         try {
@@ -165,8 +182,7 @@ public class LaundrySystem {
             return false;
         }
     }
-
-    // get service fee
+    // get current date and time
     public static float fetchServiceFee(int service){
         String query = "SELECT * FROM services " + "WHERE services.service_id = ?";
         float price = 0;
@@ -179,8 +195,7 @@ public class LaundrySystem {
             System.err.println("Error executing query: " + e.getMessage()); }
         return price;
     }
-
-    // get current date and time
+    
     public static String getDateNTime(){
         LocalDateTime now = LocalDateTime.now();
 
@@ -189,22 +204,6 @@ public class LaundrySystem {
         String formattedDateTime = now.format(formatter);
 
         return formattedDateTime;
-    }
-  
-  
-    // edit queue
-    public static boolean editQueue(int laundry_id, int payment_status, int laundry_status, String dNt){
-        String query = "UPDATE laundry_log SET laundry_claimed_time = ?, laundry_status = ?, payment_status = ? WHERE laundry_id = ?";
-        try (PreparedStatement pst = conn.prepareStatement(query)){
-            pst.setString(1, dNt);
-            pst.setInt(2, laundry_status);
-            pst.setInt(3, payment_status);
-            pst.setInt(4, laundry_id);
-            return pst.executeUpdate() > 0;
-        } catch (SQLException ex) {
-            Logger.getLogger(LaundrySystem.class.getName()).log(Level.SEVERE, "Error editing customer", ex);
-            return false;
-        }
     }
     
     
