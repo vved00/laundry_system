@@ -43,6 +43,1121 @@ public class Laundry_Interface extends javax.swing.JFrame {
         navBar = new javax.swing.JPanel();
         logoutB = new javax.swing.JButton();
         laundryB = new javax.swing.JButton();
+        customerB = new javax.swing.JButton();
+        settingsB = new javax.swing.JButton();
+        customerB1 = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        contentPanel = new javax.swing.JPanel();
+        laundryPanel = new javax.swing.JPanel();
+        displayQueuePanel = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        addQButton = new javax.swing.JButton();
+        editQButton = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        queueTable = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        laundryTable = new javax.swing.JTable();
+        queuePanel = new javax.swing.JPanel();
+        qAddPanel = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        weightText = new javax.swing.JTextField();
+        ownerContact = new javax.swing.JTextField();
+        ownerName = new javax.swing.JTextField();
+        browseCustomers = new javax.swing.JButton();
+        doneButton = new javax.swing.JButton();
+        Price = new javax.swing.JLabel();
+        serviceType = new javax.swing.JComboBox<>();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        dateNtime = new javax.swing.JTextField();
+        cancelButton = new javax.swing.JButton();
+        browseCustomer = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        browseCustomerTable = new javax.swing.JTable();
+        jLabel8 = new javax.swing.JLabel();
+        browseCustomerSearch = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        addCustomer = new javax.swing.JButton();
+        selectButton = new javax.swing.JButton();
+        settingsPanel = new javax.swing.JPanel();
+        navBar3 = new javax.swing.JPanel();
+        UserAccount = new javax.swing.JButton();
+        PaymentOptions = new javax.swing.JButton();
+        SystemPreferences = new javax.swing.JButton();
+        customerPanel = new javax.swing.JPanel();
+        customerTablePanel = new javax.swing.JPanel();
+        customerInformation = new javax.swing.JPanel();
+        f_name = new javax.swing.JTextField();
+        fnameLabel = new javax.swing.JLabel();
+        lnameLabel = new javax.swing.JLabel();
+        l_name = new javax.swing.JTextField();
+        cnumberLabel = new javax.swing.JLabel();
+        c_number = new javax.swing.JTextField();
+        jSrollPane2 = new javax.swing.JScrollPane();
+        customerTable = new javax.swing.JTable();
+        addCustomerBtn = new javax.swing.JButton();
+        editCustomerBtn = new javax.swing.JButton();
+        deleteCustomerBtn = new javax.swing.JButton();
+        customerAddPanel = new javax.swing.JPanel();
+        customerInformation1 = new javax.swing.JPanel();
+        f_nameAdd = new javax.swing.JTextField();
+        fnameLabel1 = new javax.swing.JLabel();
+        lnameLabel1 = new javax.swing.JLabel();
+        l_nameAdd = new javax.swing.JTextField();
+        cnumberLabel1 = new javax.swing.JLabel();
+        c_numberAdd = new javax.swing.JTextField();
+        addCancelBtn = new javax.swing.JButton();
+        addConfirmBtn = new javax.swing.JButton();
+        customerEditPanel = new javax.swing.JPanel();
+        customerInformation2 = new javax.swing.JPanel();
+        f_nameEdit = new javax.swing.JTextField();
+        fnameLabel2 = new javax.swing.JLabel();
+        lnameLabel2 = new javax.swing.JLabel();
+        l_nameEdit = new javax.swing.JTextField();
+        cnumberLabel2 = new javax.swing.JLabel();
+        c_numberEdit = new javax.swing.JTextField();
+        editCancelBtn = new javax.swing.JButton();
+        editConfirmBtn = new javax.swing.JButton();
+        customerDeletePanel = new javax.swing.JPanel();
+        customerInformation3 = new javax.swing.JPanel();
+        f_nameDelete = new javax.swing.JTextField();
+        fnameLabel3 = new javax.swing.JLabel();
+        lnameLabel3 = new javax.swing.JLabel();
+        l_nameDelete = new javax.swing.JTextField();
+        cnumberLabel3 = new javax.swing.JLabel();
+        c_numberDelete = new javax.swing.JTextField();
+        deleteCancelBtn = new javax.swing.JButton();
+        deleteConfirmBtn = new javax.swing.JButton();
+
+        addPanel.setPreferredSize(new java.awt.Dimension(618, 380));
+
+        javax.swing.GroupLayout addPanelLayout = new javax.swing.GroupLayout(addPanel);
+        addPanel.setLayout(addPanelLayout);
+        addPanelLayout.setHorizontalGroup(
+            addPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        addPanelLayout.setVerticalGroup(
+            addPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 380, Short.MAX_VALUE)
+        );
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(190, 60));
+        setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        container.setLayout(new java.awt.CardLayout());
+
+        Login_page.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton1.setText("LOGIN");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jTextField1.setText("Password");
+
+        jTextField2.setText("Username");
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setText("LOGIN");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(279, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(127, 127, 127))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(65, 65, 65))))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(68, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(114, 114, 114))
+        );
+
+        Login_page.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 820, 380));
+
+        container.add(Login_page, "card2");
+
+        Main_Interface.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        navBar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        logoutB.setText("Logout");
+        logoutB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logoutBActionPerformed(evt);
+            }
+        });
+        navBar.add(logoutB, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 160, 40));
+
+        laundryB.setText("Laundry");
+        laundryB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                laundryBActionPerformed(evt);
+            }
+        });
+        navBar.add(laundryB, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 160, 40));
+
+        customerB.setText("Laundry Log");
+        customerB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                customerBActionPerformed(evt);
+            }
+        });
+        navBar.add(customerB, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 160, 40));
+
+        settingsB.setText("Settings");
+        settingsB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                settingsBActionPerformed(evt);
+            }
+        });
+        navBar.add(settingsB, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 160, 40));
+
+        customerB1.setText("Customer Log");
+        customerB1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                customerB1ActionPerformed(evt);
+            }
+        });
+        navBar.add(customerB1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 160, 40));
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 800, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 360, Short.MAX_VALUE)
+        );
+
+        navBar.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 360));
+
+        Main_Interface.add(navBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 380));
+
+        contentPanel.setLayout(new java.awt.CardLayout());
+
+        laundryPanel.setLayout(new java.awt.CardLayout());
+
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        addQButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        addQButton.setText("Add Queue");
+        addQButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addQButtonActionPerformed(evt);
+            }
+        });
+        jPanel2.add(addQButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 20, 170, 30));
+
+        editQButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        editQButton.setText("Edit Queue");
+        jPanel2.add(editQButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 20, 170, 30));
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel2.setText("LAUNDRY QUEUE");
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, 160, 40));
+
+        queueTable.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        laundryTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "Name", "Contact No.", "Kg", "Price", "Service Type", "Recieved Time", "Status"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(laundryTable);
+        if (laundryTable.getColumnModel().getColumnCount() > 0) {
+            laundryTable.getColumnModel().getColumn(0).setResizable(false);
+            laundryTable.getColumnModel().getColumn(1).setResizable(false);
+            laundryTable.getColumnModel().getColumn(2).setResizable(false);
+            laundryTable.getColumnModel().getColumn(3).setResizable(false);
+            laundryTable.getColumnModel().getColumn(4).setResizable(false);
+            laundryTable.getColumnModel().getColumn(5).setResizable(false);
+            laundryTable.getColumnModel().getColumn(6).setResizable(false);
+        }
+
+        queueTable.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(4, 6, 640, 310));
+
+        javax.swing.GroupLayout displayQueuePanelLayout = new javax.swing.GroupLayout(displayQueuePanel);
+        displayQueuePanel.setLayout(displayQueuePanelLayout);
+        displayQueuePanelLayout.setHorizontalGroup(
+            displayQueuePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 653, Short.MAX_VALUE)
+            .addGroup(displayQueuePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(displayQueuePanelLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGroup(displayQueuePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(displayQueuePanelLayout.createSequentialGroup()
+                            .addGap(3, 3, 3)
+                            .addComponent(queueTable, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        displayQueuePanelLayout.setVerticalGroup(
+            displayQueuePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 380, Short.MAX_VALUE)
+            .addGroup(displayQueuePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(displayQueuePanelLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGroup(displayQueuePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(displayQueuePanelLayout.createSequentialGroup()
+                            .addGap(55, 55, 55)
+                            .addComponent(queueTable, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        laundryPanel.add(displayQueuePanel, "card2");
+
+        queuePanel.setLayout(new java.awt.CardLayout());
+
+        qAddPanel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        qAddPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setText("Add Queue");
+        qAddPanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 0, 90, 30));
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setText("Service Type");
+        qAddPanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 60, 90, 40));
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel5.setText("Laundry Owner");
+        qAddPanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 110, 40));
+        qAddPanel.add(weightText, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, 190, -1));
+        qAddPanel.add(ownerContact, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, 190, -1));
+
+        ownerName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ownerNameActionPerformed(evt);
+            }
+        });
+        qAddPanel.add(ownerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, 190, -1));
+
+        browseCustomers.setText("Browse");
+        browseCustomers.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                browseCustomersActionPerformed(evt);
+            }
+        });
+        qAddPanel.add(browseCustomers, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, -1, -1));
+
+        doneButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        doneButton.setText("Done");
+        doneButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                doneButtonActionPerformed(evt);
+            }
+        });
+        qAddPanel.add(doneButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 290, 120, 30));
+
+        Price.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        Price.setText("Total:");
+        qAddPanel.add(Price, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 280, 150, 40));
+
+        serviceType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Wash Only", "Dry Only", "Wash and Dry" }));
+        serviceType.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                serviceTypeActionPerformed(evt);
+            }
+        });
+        qAddPanel.add(serviceType, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 70, 150, 30));
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel6.setText("Weight");
+        qAddPanel.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 70, 40));
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel7.setText("Date");
+        qAddPanel.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 110, 70, 40));
+
+        dateNtime.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dateNtimeActionPerformed(evt);
+            }
+        });
+        qAddPanel.add(dateNtime, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 120, 190, -1));
+
+        cancelButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        cancelButton.setText("Cancel");
+        cancelButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cancelButtonActionPerformed(evt);
+            }
+        });
+        qAddPanel.add(cancelButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 120, 30));
+
+        queuePanel.add(qAddPanel, "card2");
+
+        browseCustomer.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        browseCustomerTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "First Name", "Last Name", "Contact Info"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        browseCustomerTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                browseCustomerTableMouseClicked(evt);
+            }
+        });
+        jScrollPane2.setViewportView(browseCustomerTable);
+        if (browseCustomerTable.getColumnModel().getColumnCount() > 0) {
+            browseCustomerTable.getColumnModel().getColumn(0).setResizable(false);
+            browseCustomerTable.getColumnModel().getColumn(1).setResizable(false);
+            browseCustomerTable.getColumnModel().getColumn(2).setResizable(false);
+        }
+
+        browseCustomer.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 72, 653, 250));
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel8.setText("Search");
+        browseCustomer.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 32, 52, 34));
+        browseCustomer.add(browseCustomerSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(64, 39, 262, -1));
+
+        jLabel9.setText("(if not existing, create new customer profile)");
+        browseCustomer.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 6, -1, -1));
+
+        addCustomer.setText("Add Customer");
+        addCustomer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addCustomerActionPerformed(evt);
+            }
+        });
+        browseCustomer.add(addCustomer, new org.netbeans.lib.awtextra.AbsoluteConstraints(535, 30, 110, 30));
+
+        selectButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        selectButton.setText("Select");
+        selectButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                selectButtonActionPerformed(evt);
+            }
+        });
+        browseCustomer.add(selectButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(525, 333, 120, 30));
+
+        queuePanel.add(browseCustomer, "card8");
+
+        laundryPanel.add(queuePanel, "card3");
+
+        contentPanel.add(laundryPanel, "card2");
+
+        navBar3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        UserAccount.setText("User Account");
+        UserAccount.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                UserAccountMouseClicked(evt);
+            }
+        });
+        UserAccount.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UserAccountActionPerformed(evt);
+            }
+        });
+        navBar3.add(UserAccount, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 160, 70));
+
+        PaymentOptions.setText("Payment Options");
+        PaymentOptions.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                PaymentOptionsMouseClicked(evt);
+            }
+        });
+        PaymentOptions.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PaymentOptionsActionPerformed(evt);
+            }
+        });
+        navBar3.add(PaymentOptions, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 190, 160, 70));
+
+        SystemPreferences.setText("System Preferences");
+        SystemPreferences.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                SystemPreferencesMouseClicked(evt);
+            }
+        });
+        SystemPreferences.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SystemPreferencesActionPerformed(evt);
+            }
+        });
+        navBar3.add(SystemPreferences, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 160, 70));
+
+        javax.swing.GroupLayout settingsPanelLayout = new javax.swing.GroupLayout(settingsPanel);
+        settingsPanel.setLayout(settingsPanelLayout);
+        settingsPanelLayout.setHorizontalGroup(
+            settingsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, settingsPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(navBar3, javax.swing.GroupLayout.PREFERRED_SIZE, 895, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(90, 90, 90))
+        );
+        settingsPanelLayout.setVerticalGroup(
+            settingsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(settingsPanelLayout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(navBar3, javax.swing.GroupLayout.DEFAULT_SIZE, 326, Short.MAX_VALUE)
+                .addGap(29, 29, 29))
+        );
+
+        contentPanel.add(settingsPanel, "card4");
+
+        customerPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        customerTablePanel.setPreferredSize(new java.awt.Dimension(650, 380));
+
+        customerInformation.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Customer Information", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 12))); // NOI18N
+
+        f_name.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                f_nameMouseClicked(evt);
+            }
+        });
+        f_name.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                f_nameActionPerformed(evt);
+            }
+        });
+        f_name.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                f_nameKeyReleased(evt);
+            }
+        });
+
+        fnameLabel.setText("First Name");
+
+        lnameLabel.setText("Last Name");
+
+        l_name.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                l_nameMouseClicked(evt);
+            }
+        });
+        l_name.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                l_nameActionPerformed(evt);
+            }
+        });
+        l_name.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                l_nameKeyReleased(evt);
+            }
+        });
+
+        cnumberLabel.setText("Contact Number");
+
+        c_number.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                c_numberMouseClicked(evt);
+            }
+        });
+        c_number.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                c_numberActionPerformed(evt);
+            }
+        });
+        c_number.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                c_numberKeyReleased(evt);
+            }
+        });
+
+        javax.swing.GroupLayout customerInformationLayout = new javax.swing.GroupLayout(customerInformation);
+        customerInformation.setLayout(customerInformationLayout);
+        customerInformationLayout.setHorizontalGroup(
+            customerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(customerInformationLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(customerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(fnameLabel, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lnameLabel, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cnumberLabel, javax.swing.GroupLayout.Alignment.LEADING))
+                .addGap(18, 18, 18)
+                .addGroup(customerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(f_name, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
+                    .addComponent(l_name)
+                    .addComponent(c_number))
+                .addContainerGap(17, Short.MAX_VALUE))
+        );
+        customerInformationLayout.setVerticalGroup(
+            customerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(customerInformationLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(customerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(f_name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fnameLabel))
+                .addGap(12, 12, 12)
+                .addGroup(customerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(l_name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lnameLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(customerInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(c_number, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cnumberLabel))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        customerTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "First Name", "Last Name", "Contact Num."
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        customerTable.setFocusable(false);
+        customerTable.setRequestFocusEnabled(false);
+        customerTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                customerTableMouseClicked(evt);
+            }
+        });
+        jSrollPane2.setViewportView(customerTable);
+        if (customerTable.getColumnModel().getColumnCount() > 0) {
+            customerTable.getColumnModel().getColumn(0).setResizable(false);
+            customerTable.getColumnModel().getColumn(1).setResizable(false);
+            customerTable.getColumnModel().getColumn(2).setResizable(false);
+        }
+
+        addCustomerBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        addCustomerBtn.setText("ADD");
+        addCustomerBtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        addCustomerBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                addCustomerBtnMouseClicked(evt);
+            }
+        });
+        addCustomerBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addCustomerBtnActionPerformed(evt);
+            }
+        });
+
+        editCustomerBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        editCustomerBtn.setText("EDIT");
+        editCustomerBtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        editCustomerBtn.setEnabled(false);
+        editCustomerBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editCustomerBtnActionPerformed(evt);
+            }
+        });
+
+        deleteCustomerBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        deleteCustomerBtn.setText("DELETE");
+        deleteCustomerBtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        deleteCustomerBtn.setEnabled(false);
+        deleteCustomerBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteCustomerBtnActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout customerTablePanelLayout = new javax.swing.GroupLayout(customerTablePanel);
+        customerTablePanel.setLayout(customerTablePanelLayout);
+        customerTablePanelLayout.setHorizontalGroup(
+            customerTablePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(customerTablePanelLayout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addGroup(customerTablePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jSrollPane2)
+                    .addGroup(customerTablePanelLayout.createSequentialGroup()
+                        .addComponent(customerInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(customerTablePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(addCustomerBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(editCustomerBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(deleteCustomerBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(25, Short.MAX_VALUE))
+        );
+        customerTablePanelLayout.setVerticalGroup(
+            customerTablePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, customerTablePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(customerTablePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(customerTablePanelLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(addCustomerBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(editCustomerBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(deleteCustomerBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(customerInformation, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jSrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(16, 16, 16))
+        );
+
+        customerPanel.add(customerTablePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        contentPanel.add(customerPanel, "card3");
+
+        customerAddPanel.setPreferredSize(new java.awt.Dimension(650, 380));
+
+        customerInformation1.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Customer Information", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+
+        f_nameAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                f_nameAddActionPerformed(evt);
+            }
+        });
+
+        fnameLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        fnameLabel1.setText("First Name");
+
+        lnameLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lnameLabel1.setText("Last Name");
+
+        l_nameAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                l_nameAddActionPerformed(evt);
+            }
+        });
+
+        cnumberLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        cnumberLabel1.setText("Contact Number");
+
+        c_numberAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                c_numberAddActionPerformed(evt);
+            }
+        });
+
+        addCancelBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        addCancelBtn.setText("CANCEL");
+        addCancelBtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        addCancelBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addCancelBtnActionPerformed(evt);
+            }
+        });
+
+        addConfirmBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        addConfirmBtn.setText("ADD");
+        addConfirmBtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        addConfirmBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addConfirmBtnActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout customerInformation1Layout = new javax.swing.GroupLayout(customerInformation1);
+        customerInformation1.setLayout(customerInformation1Layout);
+        customerInformation1Layout.setHorizontalGroup(
+            customerInformation1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(customerInformation1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(addCancelBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(39, 39, 39)
+                .addComponent(addConfirmBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(44, 44, 44))
+            .addGroup(customerInformation1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(customerInformation1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(customerInformation1Layout.createSequentialGroup()
+                        .addGroup(customerInformation1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lnameLabel1)
+                            .addComponent(fnameLabel1))
+                        .addGap(56, 56, 56)
+                        .addGroup(customerInformation1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(l_nameAdd, javax.swing.GroupLayout.DEFAULT_SIZE, 291, Short.MAX_VALUE)
+                            .addComponent(f_nameAdd))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, customerInformation1Layout.createSequentialGroup()
+                        .addComponent(cnumberLabel1)
+                        .addGap(18, 18, 18)
+                        .addComponent(c_numberAdd)))
+                .addContainerGap())
+        );
+        customerInformation1Layout.setVerticalGroup(
+            customerInformation1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(customerInformation1Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addGroup(customerInformation1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(fnameLabel1)
+                    .addComponent(f_nameAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(customerInformation1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lnameLabel1)
+                    .addComponent(l_nameAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(customerInformation1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(cnumberLabel1)
+                    .addComponent(c_numberAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                .addGroup(customerInformation1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addCancelBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(addConfirmBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout customerAddPanelLayout = new javax.swing.GroupLayout(customerAddPanel);
+        customerAddPanel.setLayout(customerAddPanelLayout);
+        customerAddPanelLayout.setHorizontalGroup(
+            customerAddPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(customerAddPanelLayout.createSequentialGroup()
+                .addGap(102, 102, 102)
+                .addComponent(customerInformation1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(95, Short.MAX_VALUE))
+        );
+        customerAddPanelLayout.setVerticalGroup(
+            customerAddPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(customerAddPanelLayout.createSequentialGroup()
+                .addGap(62, 62, 62)
+                .addComponent(customerInformation1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(71, Short.MAX_VALUE))
+        );
+
+        contentPanel.add(customerAddPanel, "card2");
+
+        customerInformation2.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Customer Information", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+
+        f_nameEdit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                f_nameEditActionPerformed(evt);
+            }
+        });
+
+        fnameLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        fnameLabel2.setText("First Name");
+
+        lnameLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lnameLabel2.setText("Last Name");
+
+        l_nameEdit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                l_nameEditActionPerformed(evt);
+            }
+        });
+
+        cnumberLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        cnumberLabel2.setText("Contact Number");
+
+        c_numberEdit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                c_numberEditActionPerformed(evt);
+            }
+        });
+
+        editCancelBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        editCancelBtn.setText("CANCEL");
+        editCancelBtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        editCancelBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editCancelBtnActionPerformed(evt);
+            }
+        });
+
+        editConfirmBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        editConfirmBtn.setText("EDIT");
+        editConfirmBtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        editConfirmBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editConfirmBtnActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout customerInformation2Layout = new javax.swing.GroupLayout(customerInformation2);
+        customerInformation2.setLayout(customerInformation2Layout);
+        customerInformation2Layout.setHorizontalGroup(
+            customerInformation2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(customerInformation2Layout.createSequentialGroup()
+                .addContainerGap(58, Short.MAX_VALUE)
+                .addComponent(editCancelBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(39, 39, 39)
+                .addComponent(editConfirmBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(44, 44, 44))
+            .addGroup(customerInformation2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(customerInformation2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cnumberLabel2)
+                    .addComponent(fnameLabel2)
+                    .addComponent(lnameLabel2))
+                .addGap(18, 18, 18)
+                .addGroup(customerInformation2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(l_nameEdit, javax.swing.GroupLayout.DEFAULT_SIZE, 291, Short.MAX_VALUE)
+                    .addComponent(c_numberEdit, javax.swing.GroupLayout.DEFAULT_SIZE, 291, Short.MAX_VALUE)
+                    .addComponent(f_nameEdit))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        customerInformation2Layout.setVerticalGroup(
+            customerInformation2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(customerInformation2Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addGroup(customerInformation2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(fnameLabel2)
+                    .addComponent(f_nameEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(customerInformation2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lnameLabel2)
+                    .addComponent(l_nameEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(customerInformation2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(cnumberLabel2)
+                    .addComponent(c_numberEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                .addGroup(customerInformation2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(editCancelBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(editConfirmBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout customerEditPanelLayout = new javax.swing.GroupLayout(customerEditPanel);
+        customerEditPanel.setLayout(customerEditPanelLayout);
+        customerEditPanelLayout.setHorizontalGroup(
+            customerEditPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(customerEditPanelLayout.createSequentialGroup()
+                .addGap(102, 102, 102)
+                .addComponent(customerInformation2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(95, Short.MAX_VALUE))
+        );
+        customerEditPanelLayout.setVerticalGroup(
+            customerEditPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, customerEditPanelLayout.createSequentialGroup()
+                .addContainerGap(67, Short.MAX_VALUE)
+                .addComponent(customerInformation2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(66, 66, 66))
+        );
+
+        contentPanel.add(customerEditPanel, "card2");
+
+        customerDeletePanel.setPreferredSize(new java.awt.Dimension(650, 380));
+
+        customerInformation3.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true), "Customer Information", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+
+        f_nameDelete.setFocusable(false);
+        f_nameDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                f_nameDeleteActionPerformed(evt);
+            }
+        });
+
+        fnameLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        fnameLabel3.setText("First Name");
+
+        lnameLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lnameLabel3.setText("Last Name");
+
+        l_nameDelete.setFocusable(false);
+        l_nameDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                l_nameDeleteActionPerformed(evt);
+            }
+        });
+
+        cnumberLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        cnumberLabel3.setText("Contact Number");
+
+        c_numberDelete.setFocusable(false);
+        c_numberDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                c_numberDeleteActionPerformed(evt);
+            }
+        });
+
+        deleteCancelBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        deleteCancelBtn.setText("CANCEL");
+        deleteCancelBtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        deleteCancelBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteCancelBtnActionPerformed(evt);
+            }
+        });
+
+        deleteConfirmBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        deleteConfirmBtn.setText("DELETE");
+        deleteConfirmBtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        deleteConfirmBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteConfirmBtnActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout customerInformation3Layout = new javax.swing.GroupLayout(customerInformation3);
+        customerInformation3.setLayout(customerInformation3Layout);
+        customerInformation3Layout.setHorizontalGroup(
+            customerInformation3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(customerInformation3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(customerInformation3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cnumberLabel3)
+                    .addComponent(lnameLabel3)
+                    .addComponent(fnameLabel3))
+                .addGap(18, 18, 18)
+                .addGroup(customerInformation3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(l_nameDelete, javax.swing.GroupLayout.DEFAULT_SIZE, 291, Short.MAX_VALUE)
+                    .addComponent(c_numberDelete)
+                    .addComponent(f_nameDelete))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(customerInformation3Layout.createSequentialGroup()
+                .addContainerGap(58, Short.MAX_VALUE)
+                .addComponent(deleteCancelBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(39, 39, 39)
+                .addComponent(deleteConfirmBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(44, 44, 44))
+        );
+        customerInformation3Layout.setVerticalGroup(
+            customerInformation3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(customerInformation3Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addGroup(customerInformation3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(fnameLabel3)
+                    .addComponent(f_nameDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(customerInformation3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lnameLabel3)
+                    .addComponent(l_nameDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(customerInformation3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(cnumberLabel3)
+                    .addComponent(c_numberDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                .addGroup(customerInformation3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(deleteCancelBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(deleteConfirmBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout customerDeletePanelLayout = new javax.swing.GroupLayout(customerDeletePanel);
+        customerDeletePanel.setLayout(customerDeletePanelLayout);
+        customerDeletePanelLayout.setHorizontalGroup(
+            customerDeletePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(customerDeletePanelLayout.createSequentialGroup()
+                .addGap(104, 104, 104)
+                .addComponent(customerInformation3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(93, Short.MAX_VALUE))
+        );
+        customerDeletePanelLayout.setVerticalGroup(
+            customerDeletePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(customerDeletePanelLayout.createSequentialGroup()
+                .addGap(58, 58, 58)
+                .addComponent(customerInformation3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(75, Short.MAX_VALUE))
+        );
+
+        contentPanel.add(customerDeletePanel, "card2");
+
+        Main_Interface.add(contentPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, 650, 380));
+
+        container.add(Main_Interface, "card3");
+
+        getContentPane().add(container, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
+    
+    // functions
+    static int selectedCustomer_id;
+    private TableRowSorter<DefaultTableModel> tableRowSorter;
+    private void loadCustomerData() {
+        DefaultTableModel tableModel = LaundrySystem.getCustomerTableModel();
+        customerTable.setModel(tableModel);
+        browseCustomerTable.setModel(tableModel);
+        
+        // TableRowSorter for filtering
+        tableRowSorter = new TableRowSorter<>(tableModel);
+        customerTable.setRowSorter(tableRowSorter);
+        browseCustomerTable.setRowSorter(tableRowSorter);
+
+        // Hide the customer_id column (index 0)
+        if (customerTable.getColumnModel().getColumnCount() > 3) {
+            customerTable.getColumnModel().removeColumn(customerTable.getColumnModel().getColumn(0));
+            browseCustomerTable.getColumnModel().removeColumn(browseCustomerTable.getColumnModel().getColumn(0));
+
+    /**
+     * Creates new form Laundry_Interface
+     */
+    public Laundry_Interface() {
+        initComponents();
+    }
+
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        addPanel = new javax.swing.JPanel();
+        container = new javax.swing.JPanel();
+        Login_page = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        Main_Interface = new javax.swing.JPanel();
+        navBar = new javax.swing.JPanel();
+        logoutB = new javax.swing.JButton();
+        laundryB = new javax.swing.JButton();
         laundryLogB = new javax.swing.JButton();
         settingsB = new javax.swing.JButton();
         customerB1 = new javax.swing.JButton();
@@ -1170,9 +2285,540 @@ public class Laundry_Interface extends javax.swing.JFrame {
                 return 3;
             case "Select Service..":
                 JOptionPane.showMessageDialog(null, "Invalid service selected! Please choose a valid service.", "Selection Error", JOptionPane.ERROR_MESSAGE);
+
         }
         return 0;
     }
+
+    private void loadLaundryData(){
+        DefaultTableModel tableModel = LaundrySystem.getLaundryLog();
+        laundryTable.setModel(tableModel);
+        tableRowSorter = new TableRowSorter<>(tableModel);
+        laundryTable.setRowSorter(tableRowSorter);
+        if (laundryTable.getColumnModel().getColumnCount() > 3) {
+            laundryTable.getColumnModel().removeColumn(laundryTable.getColumnModel().getColumn(0));
+        }
+    }
+        
+    private int fetchService(){
+        Object selected = serviceType.getSelectedItem(); 
+        int service = 0;
+        switch(selected.toString()){
+            case "Wash and Dry":
+                service = 1;
+                break;
+            case "Wash Only":
+                service = 2;
+                break;
+            case "Dry Only":
+                service = 3;
+        }
+        return service;
+    }
+    
+    private void applyFilter(String query) {
+        if (query.isEmpty()) {
+            tableRowSorter.setRowFilter(null); // Show all rows
+        } else {
+            tableRowSorter.setRowFilter(RowFilter.regexFilter("(?i)" + query, 1, 2, 3)); 
+            // Filters columns 1 (First Name), 2 (Last Name), and 3 (Contact Number)
+        }
+    }
+
+    private void clearSelectedCustomer(){
+        f_name.setText("");
+        l_name.setText("");
+        c_number.setText("");
+        
+        f_nameEdit.setText("");
+        l_nameEdit.setText("");
+        c_numberEdit.setText("");
+        
+        f_nameDelete.setText("");
+        l_nameDelete.setText("");
+        c_numberDelete.setText("");
+        
+        editCustomerBtn.setEnabled(false);
+        deleteCustomerBtn.setEnabled(false);
+    }
+    
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        loadLaundryData();
+        container.removeAll();
+        container.repaint();
+        container.revalidate();
+        container.add(Main_Interface);
+        container.repaint();
+        container.revalidate();        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void laundryBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laundryBActionPerformed
+        loadLaundryData();
+        contentPanel.removeAll();
+        contentPanel.repaint();
+        contentPanel.revalidate();
+        contentPanel.add(laundryPanel);
+        contentPanel.repaint();
+        contentPanel.revalidate();     
+    }//GEN-LAST:event_laundryBActionPerformed
+
+    private void customerBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerBActionPerformed
+ 
+    }//GEN-LAST:event_customerBActionPerformed
+
+    private void settingsBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_settingsBActionPerformed
+        contentPanel.removeAll();
+        contentPanel.repaint();
+        contentPanel.revalidate();
+        contentPanel.add(settingsPanel);
+        contentPanel.repaint();
+        contentPanel.revalidate(); 
+    }//GEN-LAST:event_settingsBActionPerformed
+
+    private void logoutBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutBActionPerformed
+             int response = JOptionPane.showConfirmDialog(null, 
+            "Are you sure you want to log out?", 
+            "Log Out", JOptionPane.YES_NO_OPTION);
+
+    // If the user clicks 'Yes', exit the application
+    if (response == JOptionPane.YES_OPTION) {
+        System.exit(0); // Close the application
+    }
+
+
+    }//GEN-LAST:event_logoutBActionPerformed
+
+    private void customerB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerB1ActionPerformed
+        loadCustomerData();
+        contentPanel.removeAll();
+        contentPanel.repaint();
+        contentPanel.revalidate();
+        contentPanel.add(customerTablePanel);
+        contentPanel.repaint();
+        contentPanel.revalidate();
+    }//GEN-LAST:event_customerB1ActionPerformed
+
+    private void f_nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_f_nameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_f_nameActionPerformed
+
+    private void l_nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_l_nameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_l_nameActionPerformed
+
+    private void c_numberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c_numberActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_c_numberActionPerformed
+
+    private void addCustomerBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addCustomerBtnActionPerformed
+        contentPanel.removeAll();
+        contentPanel.repaint();
+        contentPanel.revalidate();
+        contentPanel.add(customerAddPanel);
+        contentPanel.repaint();
+        contentPanel.revalidate();
+    }//GEN-LAST:event_addCustomerBtnActionPerformed
+
+    private void f_nameAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_f_nameAddActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_f_nameAddActionPerformed
+
+    private void l_nameAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_l_nameAddActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_l_nameAddActionPerformed
+
+    private void c_numberAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c_numberAddActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_c_numberAddActionPerformed
+
+    private void addConfirmBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addConfirmBtnActionPerformed
+        String fname = f_nameAdd.getText();
+        String lname = l_nameAdd.getText();
+        String cnumber = c_numberAdd.getText();
+        
+        if (!fname.isEmpty() && !lname.isEmpty() && !cnumber.isEmpty()) {
+            boolean isAdded = LaundrySystem.addCustomer(fname, lname, cnumber);
+
+            if (isAdded) {
+                JOptionPane.showMessageDialog(this, "Customer added successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
+                f_nameAdd.setText("");
+                l_nameAdd.setText("");
+                c_numberAdd.setText("");
+                loadCustomerData();
+                contentPanel.removeAll();
+                contentPanel.repaint();
+                contentPanel.revalidate();
+                contentPanel.add(customerTablePanel);
+                contentPanel.repaint();
+                contentPanel.revalidate();
+            } else {
+                JOptionPane.showMessageDialog(this, "Failed to add customer. Please try again.", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "All fields must be filled!", "Warning", JOptionPane.WARNING_MESSAGE);
+        }
+    }//GEN-LAST:event_addConfirmBtnActionPerformed
+
+    private void addCancelBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addCancelBtnActionPerformed
+        contentPanel.removeAll();
+        contentPanel.repaint();
+        contentPanel.revalidate();
+        contentPanel.add(customerTablePanel);
+        contentPanel.repaint();
+        contentPanel.revalidate();
+    }//GEN-LAST:event_addCancelBtnActionPerformed
+
+    private void f_nameEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_f_nameEditActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_f_nameEditActionPerformed
+
+    private void l_nameEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_l_nameEditActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_l_nameEditActionPerformed
+
+    private void c_numberEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c_numberEditActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_c_numberEditActionPerformed
+
+    private void editCancelBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editCancelBtnActionPerformed
+        contentPanel.removeAll();
+        contentPanel.repaint();
+        contentPanel.revalidate();
+        contentPanel.add(customerTablePanel);
+        contentPanel.repaint();
+        contentPanel.revalidate();
+        clearSelectedCustomer();
+    }//GEN-LAST:event_editCancelBtnActionPerformed
+
+    private void editConfirmBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editConfirmBtnActionPerformed
+        String fname = f_nameEdit.getText();
+        String lname = l_nameEdit.getText();
+        String cnumber = c_numberEdit.getText();
+        int customerID = selectedCustomer_id;
+
+        if (!fname.isEmpty() && !lname.isEmpty() && !cnumber.isEmpty()) {
+            boolean isEdited = LaundrySystem.editCustomer(customerID, fname, lname, cnumber);
+            if (isEdited) {
+                JOptionPane.showMessageDialog(this, "Customer edited successfully!");
+                clearSelectedCustomer();
+                loadCustomerData();
+                contentPanel.removeAll();
+                contentPanel.repaint();
+                contentPanel.revalidate();
+                contentPanel.add(customerTablePanel);
+                contentPanel.repaint();
+                contentPanel.revalidate();
+            } else {
+                JOptionPane.showMessageDialog(this, "Failed to edit customer. Please try again.");
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "All fields must be filled out!");
+        }
+    }//GEN-LAST:event_editConfirmBtnActionPerformed
+
+    private void f_nameDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_f_nameDeleteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_f_nameDeleteActionPerformed
+
+    private void l_nameDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_l_nameDeleteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_l_nameDeleteActionPerformed
+
+    private void c_numberDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_c_numberDeleteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_c_numberDeleteActionPerformed
+
+    private void deleteCancelBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteCancelBtnActionPerformed
+        contentPanel.removeAll();
+        contentPanel.repaint();
+        contentPanel.revalidate();
+        contentPanel.add(customerTablePanel);
+        contentPanel.repaint();
+        contentPanel.revalidate();
+        clearSelectedCustomer();
+    }//GEN-LAST:event_deleteCancelBtnActionPerformed
+
+    private void deleteConfirmBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteConfirmBtnActionPerformed
+
+        int confirmation = JOptionPane.showConfirmDialog(this, "Are you sure you want to delete this customer?", "Confirm Delete", JOptionPane.YES_NO_OPTION);
+        if (confirmation == JOptionPane.YES_OPTION) {
+            boolean isDeleted = LaundrySystem.deleteCustomer(selectedCustomer_id);
+            if (isDeleted) {
+                JOptionPane.showMessageDialog(this, "Customer deleted successfully!");
+                clearSelectedCustomer();
+                loadCustomerData();
+                contentPanel.removeAll();
+                contentPanel.repaint();
+                contentPanel.revalidate();
+                contentPanel.add(customerTablePanel);
+                contentPanel.repaint();
+                contentPanel.revalidate();
+            } else {
+                JOptionPane.showMessageDialog(this, "Failed to delete customer. Please try again.");
+            }
+        }
+    }//GEN-LAST:event_deleteConfirmBtnActionPerformed
+
+    private void editCustomerBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editCustomerBtnActionPerformed
+        contentPanel.removeAll();
+        contentPanel.repaint();
+        contentPanel.revalidate();
+        contentPanel.add(customerEditPanel);
+        contentPanel.repaint();
+        contentPanel.revalidate();
+    }//GEN-LAST:event_editCustomerBtnActionPerformed
+
+    private void deleteCustomerBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteCustomerBtnActionPerformed
+        contentPanel.removeAll();
+        contentPanel.repaint();
+        contentPanel.revalidate();
+        contentPanel.add(customerDeletePanel);
+        contentPanel.repaint();
+        contentPanel.revalidate();
+    }//GEN-LAST:event_deleteCustomerBtnActionPerformed
+
+    private void addCustomerBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addCustomerBtnMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addCustomerBtnMouseClicked
+
+    private void customerTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_customerTableMouseClicked
+        int row = customerTable.getSelectedRow();
+        // retrieve data from the model
+        int modelRow = customerTable.convertRowIndexToModel(row);
+        selectedCustomer_id = (int) customerTable.getModel().getValueAt(modelRow, 0);
+        f_name.setText(customerTable.getModel().getValueAt(modelRow, 1).toString());
+        l_name.setText(customerTable.getModel().getValueAt(modelRow, 2).toString());
+        c_number.setText(customerTable.getModel().getValueAt(modelRow, 3).toString());
+
+        f_nameEdit.setText(f_name.getText());
+        l_nameEdit.setText(l_name.getText());
+        c_numberEdit.setText(c_number.getText());
+        f_nameDelete.setText(f_name.getText());
+        l_nameDelete.setText(l_name.getText());
+        c_numberDelete.setText(c_number.getText());
+
+        editCustomerBtn.setEnabled(true);
+        deleteCustomerBtn.setEnabled(true);
+    }//GEN-LAST:event_customerTableMouseClicked
+
+    private void f_nameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_f_nameMouseClicked
+        clearSelectedCustomer();
+    }//GEN-LAST:event_f_nameMouseClicked
+
+    private void f_nameKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_f_nameKeyReleased
+        String query = f_name.getText().trim();
+        applyFilter(query);
+    }//GEN-LAST:event_f_nameKeyReleased
+
+    private void l_nameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_l_nameMouseClicked
+        clearSelectedCustomer();
+    }//GEN-LAST:event_l_nameMouseClicked
+
+    private void c_numberMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_c_numberMouseClicked
+        clearSelectedCustomer();
+    }//GEN-LAST:event_c_numberMouseClicked
+
+    private void l_nameKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_l_nameKeyReleased
+        String query = l_name.getText().trim();
+        applyFilter(query);
+    }//GEN-LAST:event_l_nameKeyReleased
+
+    private void c_numberKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_c_numberKeyReleased
+        String query = c_number.getText().trim();
+        applyFilter(query);
+    }//GEN-LAST:event_c_numberKeyReleased
+
+    private void serviceTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_serviceTypeActionPerformed
+        int service = fetchService();
+        Float service_fee = LaundrySystem.fetchServiceFee(service);
+        Float price =  service_fee * Float.parseFloat(weightText.getText());
+        Price.setText("Total: " + price);
+    }//GEN-LAST:event_serviceTypeActionPerformed
+
+    private void addQButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addQButtonActionPerformed
+        String dNt = LaundrySystem.getDateNTime();
+        dateNtime.setText(dNt);
+        laundryPanel.removeAll();
+        laundryPanel.repaint();
+        laundryPanel.revalidate();
+        laundryPanel.add(queuePanel);
+        laundryPanel.repaint();
+        laundryPanel.revalidate();
+    }//GEN-LAST:event_addQButtonActionPerformed
+
+    private void doneButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_doneButtonActionPerformed
+        float weight = Float.parseFloat(weightText.getText());
+        String date = dateNtime.getText();
+        int service = fetchService();
+        
+        boolean isAdded = LaundrySystem.addQueue(selectedCustomer_id, weight, service, date, 1);
+        if (isAdded) {
+            JOptionPane.showMessageDialog(this, "New Queue added successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
+            weightText.setText("");
+            ownerName.setText("");
+            ownerContact.setText("");
+            loadLaundryData();
+            laundryPanel.removeAll();
+            laundryPanel.repaint();
+            laundryPanel.revalidate();
+            laundryPanel.add(displayQueuePanel);
+            laundryPanel.repaint();
+            laundryPanel.revalidate();
+        } else {
+            JOptionPane.showMessageDialog(this, "Failed to add customer. Please try again.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_doneButtonActionPerformed
+
+    private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
+        laundryPanel.removeAll();
+        laundryPanel.repaint();
+        laundryPanel.revalidate();
+        laundryPanel.add(displayQueuePanel);
+        laundryPanel.repaint();
+        laundryPanel.revalidate();
+    }//GEN-LAST:event_cancelButtonActionPerformed
+
+    private void browseCustomersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_browseCustomersActionPerformed
+        loadCustomerData();
+        queuePanel.removeAll();
+        queuePanel.repaint();
+        queuePanel.revalidate();
+        queuePanel.add(browseCustomer);
+        queuePanel.repaint();
+        queuePanel.revalidate();
+    }//GEN-LAST:event_browseCustomersActionPerformed
+
+    private void addCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addCustomerActionPerformed
+        contentPanel.removeAll();
+        contentPanel.repaint();
+        contentPanel.revalidate();
+        contentPanel.add(customerAddPanel);
+        contentPanel.repaint();
+        contentPanel.revalidate();
+    }//GEN-LAST:event_addCustomerActionPerformed
+
+    private void browseCustomerTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_browseCustomerTableMouseClicked
+
+    }//GEN-LAST:event_browseCustomerTableMouseClicked
+
+    private void ownerNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ownerNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ownerNameActionPerformed
+
+    private void selectButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectButtonActionPerformed
+        int row = browseCustomerTable.getSelectedRow();
+        // retrieve data from the model
+        int modelRow = browseCustomerTable.convertRowIndexToModel(row);
+        selectedCustomer_id = (int) browseCustomerTable.getModel().getValueAt(modelRow, 0);
+        String first_name = browseCustomerTable.getModel().getValueAt(modelRow, 1).toString() + " ";
+        String owner_name = first_name.concat(browseCustomerTable.getModel().getValueAt(modelRow, 2).toString());
+        ownerName.setText(owner_name);
+        ownerContact.setText(browseCustomerTable.getModel().getValueAt(modelRow, 3).toString());
+        
+        queuePanel.removeAll();
+        queuePanel.repaint();
+        queuePanel.revalidate();
+        queuePanel.add(qAddPanel);
+        queuePanel.repaint();
+        queuePanel.revalidate();
+    }//GEN-LAST:event_selectButtonActionPerformed
+
+    private void dateNtimeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dateNtimeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dateNtimeActionPerformed
+
+    private void UserAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UserAccountActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_UserAccountActionPerformed
+
+    private void PaymentOptionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PaymentOptionsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PaymentOptionsActionPerformed
+
+    private void SystemPreferencesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SystemPreferencesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SystemPreferencesActionPerformed
+
+    private void UserAccountMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UserAccountMouseClicked
+       
+    Object[] options = {"Update Profile", "Change Password", "Cancel"};
+    
+    // Show the dialog
+    int choice = JOptionPane.showOptionDialog(this,
+            "What would you like to do?",
+            "User Account",
+            JOptionPane.YES_NO_CANCEL_OPTION,
+            JOptionPane.QUESTION_MESSAGE,
+            null, options, options[2]); // Default button is "Cancel"
+    
+    // Handle the user's choice
+    switch (choice) {
+        case JOptionPane.YES_OPTION:
+            // Open the Update Profile functionality
+            UserAccountDialog.showUpdateProfileDialog(this);
+            break;
+        case JOptionPane.NO_OPTION:
+            // Open the Change Password functionality
+            UserAccountDialog.showChangePasswordDialog(this);
+            break;
+        default:
+            // User clicked "Cancel" or closed the dialog
+            break;
+    }
+
+    }//GEN-LAST:event_UserAccountMouseClicked
+
+    private void SystemPreferencesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SystemPreferencesMouseClicked
+        SystemPreferencesDialog.showSystemPreferencesDialog(this);
+    }//GEN-LAST:event_SystemPreferencesMouseClicked
+
+    private void PaymentOptionsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PaymentOptionsMouseClicked
+       PaymentOptionsDialog.showPaymentOptionsDialog(this);
+    }//GEN-LAST:event_PaymentOptionsMouseClicked
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Laundry_Interface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Laundry_Interface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Laundry_Interface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Laundry_Interface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Laundry_Interface().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel Login_page;
+    private javax.swing.JPanel Main_Interface;
+    private javax.swing.JButton PaymentOptions;
+    private javax.swing.JLabel Price;
+    private javax.swing.JButton SystemPreferences;
+    private javax.swing.JButton UserAccount;
+
     // get payment status
     private int fetchPaymentStat(int flag){
         if (flag == 1){
@@ -1734,6 +3380,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
     private javax.swing.JPanel container;
     private javax.swing.JPanel contentPanel;
     private javax.swing.JPanel customerAddPanel;
+    private javax.swing.JButton customerB;
     private javax.swing.JButton customerB1;
     private javax.swing.JPanel customerDeletePanel;
     private javax.swing.JPanel customerEditPanel;
@@ -1785,6 +3432,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -1807,6 +3455,10 @@ public class Laundry_Interface extends javax.swing.JFrame {
     private javax.swing.JTable logTable;
     private javax.swing.JButton logoutB;
     private javax.swing.JPanel navBar;
+    private javax.swing.JPanel navBar3;
+    private javax.swing.JTextField ownerContact;
+    private javax.swing.JTextField ownerName;
+    private javax.swing.JPanel qAddPanel;
     private javax.swing.JTextField ownerContact;
     private javax.swing.JTextField ownerName;
     private javax.swing.JComboBox<String> paymentStats;
