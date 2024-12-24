@@ -1597,11 +1597,11 @@ public class Laundry_Interface extends javax.swing.JFrame {
     switch (choice) {
         case JOptionPane.YES_OPTION:
             // Open the Update Profile functionality
-            UserAccountDialog.showupdateProfile(this);
+            UserAccountDialog.showUpdateProfileDialog(this);
             break;
         case JOptionPane.NO_OPTION:
             // Open the Change Password functionality
-            UserAccountDialog.showchangePassword(this);
+            UserAccountDialog.showChangePasswordDialog(this);
             break;
         default:
             // User clicked "Cancel" or closed the dialog
