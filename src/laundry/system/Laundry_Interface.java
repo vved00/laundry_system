@@ -56,6 +56,8 @@ public class Laundry_Interface extends javax.swing.JFrame {
         queueTable = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         laundryTable = new javax.swing.JTable();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel19 = new javax.swing.JLabel();
         queuePanel = new javax.swing.JPanel();
         qAddPanel = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -100,11 +102,9 @@ public class Laundry_Interface extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         addCustomer = new javax.swing.JButton();
         selectButton = new javax.swing.JButton();
-        laundryLog = new javax.swing.JPanel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        logTable = new javax.swing.JTable();
-        jLabel19 = new javax.swing.JLabel();
         settingsPanel = new javax.swing.JPanel();
+        UserAccount = new javax.swing.JButton();
+        SystemPreferences = new javax.swing.JButton();
         customerPanel = new javax.swing.JPanel();
         customerTablePanel = new javax.swing.JPanel();
         customerInformation = new javax.swing.JPanel();
@@ -330,6 +330,12 @@ public class Laundry_Interface extends javax.swing.JFrame {
 
         queueTable.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(4, 6, 640, 310));
 
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel19.setText("LAUNDRY LOG");
+        jPanel3.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, 160, 40));
+
         javax.swing.GroupLayout displayQueuePanelLayout = new javax.swing.GroupLayout(displayQueuePanel);
         displayQueuePanel.setLayout(displayQueuePanelLayout);
         displayQueuePanelLayout.setHorizontalGroup(
@@ -342,7 +348,8 @@ public class Laundry_Interface extends javax.swing.JFrame {
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(displayQueuePanelLayout.createSequentialGroup()
                             .addGap(3, 3, 3)
-                            .addComponent(queueTable, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(queueTable, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         displayQueuePanelLayout.setVerticalGroup(
@@ -352,7 +359,10 @@ public class Laundry_Interface extends javax.swing.JFrame {
                 .addGroup(displayQueuePanelLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
                     .addGroup(displayQueuePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(displayQueuePanelLayout.createSequentialGroup()
+                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(displayQueuePanelLayout.createSequentialGroup()
                             .addGap(55, 55, 55)
                             .addComponent(queueTable, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -581,54 +591,49 @@ public class Laundry_Interface extends javax.swing.JFrame {
 
         contentPanel.add(laundryPanel, "card2");
 
-        logTable.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+        UserAccount.setText("User Account");
+        UserAccount.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                UserAccountMouseClicked(evt);
             }
-        ));
-        jScrollPane3.setViewportView(logTable);
+        });
+        UserAccount.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UserAccountActionPerformed(evt);
+            }
+        });
 
-        jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel19.setText("Laundry Queue");
-
-        javax.swing.GroupLayout laundryLogLayout = new javax.swing.GroupLayout(laundryLog);
-        laundryLog.setLayout(laundryLogLayout);
-        laundryLogLayout.setHorizontalGroup(
-            laundryLogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(laundryLogLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(laundryLogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 625, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(14, Short.MAX_VALUE))
-        );
-        laundryLogLayout.setVerticalGroup(
-            laundryLogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, laundryLogLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20))
-        );
-
-        contentPanel.add(laundryLog, "card8");
+        SystemPreferences.setText("System Preferences");
+        SystemPreferences.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                SystemPreferencesMouseClicked(evt);
+            }
+        });
+        SystemPreferences.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SystemPreferencesActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout settingsPanelLayout = new javax.swing.GroupLayout(settingsPanel);
         settingsPanel.setLayout(settingsPanelLayout);
         settingsPanelLayout.setHorizontalGroup(
             settingsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 653, Short.MAX_VALUE)
+            .addGroup(settingsPanelLayout.createSequentialGroup()
+                .addGap(72, 72, 72)
+                .addComponent(UserAccount, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(42, 42, 42)
+                .addComponent(SystemPreferences, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(254, Short.MAX_VALUE))
         );
         settingsPanelLayout.setVerticalGroup(
             settingsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 380, Short.MAX_VALUE)
+            .addGroup(settingsPanelLayout.createSequentialGroup()
+                .addGap(107, 107, 107)
+                .addGroup(settingsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(UserAccount, javax.swing.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE)
+                    .addComponent(SystemPreferences, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(186, Short.MAX_VALUE))
         );
 
         contentPanel.add(settingsPanel, "card4");
@@ -902,7 +907,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
             .addGroup(customerAddPanelLayout.createSequentialGroup()
                 .addGap(102, 102, 102)
                 .addComponent(customerInformation1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(110, Short.MAX_VALUE))
+                .addContainerGap(107, Short.MAX_VALUE))
         );
         customerAddPanelLayout.setVerticalGroup(
             customerAddPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -948,7 +953,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
         customerInformation2Layout.setHorizontalGroup(
             customerInformation2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(customerInformation2Layout.createSequentialGroup()
-                .addContainerGap(46, Short.MAX_VALUE)
+                .addContainerGap(48, Short.MAX_VALUE)
                 .addComponent(editCancelBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(39, 39, 39)
                 .addComponent(editConfirmBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -995,7 +1000,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
             .addGroup(customerEditPanelLayout.createSequentialGroup()
                 .addGap(102, 102, 102)
                 .addComponent(customerInformation2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(110, Short.MAX_VALUE))
+                .addContainerGap(107, Short.MAX_VALUE))
         );
         customerEditPanelLayout.setVerticalGroup(
             customerEditPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1061,7 +1066,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
                     .addComponent(f_nameDelete))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(customerInformation3Layout.createSequentialGroup()
-                .addContainerGap(46, Short.MAX_VALUE)
+                .addContainerGap(48, Short.MAX_VALUE)
                 .addComponent(deleteCancelBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(39, 39, 39)
                 .addComponent(deleteConfirmBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1096,7 +1101,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
             .addGroup(customerDeletePanelLayout.createSequentialGroup()
                 .addGap(104, 104, 104)
                 .addComponent(customerInformation3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(108, Short.MAX_VALUE))
+                .addContainerGap(105, Short.MAX_VALUE))
         );
         customerDeletePanelLayout.setVerticalGroup(
             customerDeletePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1121,7 +1126,6 @@ public class Laundry_Interface extends javax.swing.JFrame {
     static int selectedCustomer_id;
     static int selectedLaundry_id;
     private TableRowSorter<DefaultTableModel> tableRowSorter;
-    // get customer data
     private void loadCustomerData() {
         DefaultTableModel tableModel = LaundrySystem.getCustomerTableModel();
         customerTable.setModel(tableModel);
@@ -1138,20 +1142,10 @@ public class Laundry_Interface extends javax.swing.JFrame {
             browseCustomerTable.getColumnModel().removeColumn(browseCustomerTable.getColumnModel().getColumn(0));
         }
     }
-    // get laundry queue data
+    // get laundry data
     private void loadLaundryData(){
         DefaultTableModel tableModel = LaundrySystem.getLaundryLog();
         laundryTable.setModel(tableModel);
-        tableRowSorter = new TableRowSorter<>(tableModel);
-        laundryTable.setRowSorter(tableRowSorter);
-        if (laundryTable.getColumnModel().getColumnCount() > 3) {
-            laundryTable.getColumnModel().removeColumn(laundryTable.getColumnModel().getColumn(0));
-        }
-    }
-    // get laundry data
-    private void loadData(){
-        DefaultTableModel tableModel = LaundrySystem.laundryLog();
-        logTable.setModel(tableModel);
         tableRowSorter = new TableRowSorter<>(tableModel);
         laundryTable.setRowSorter(tableRowSorter);
         if (laundryTable.getColumnModel().getColumnCount() > 3) {
@@ -1234,9 +1228,22 @@ public class Laundry_Interface extends javax.swing.JFrame {
         editCustomerBtn.setEnabled(false);
         deleteCustomerBtn.setEnabled(false);
     }
+
+    private void filterLaundry() {
+        tableRowSorter.setRowFilter(new RowFilter<DefaultTableModel, Integer>() {
+            @Override
+            public boolean include(RowFilter.Entry<? extends DefaultTableModel, ? extends Integer> entry) {
+                String status = entry.getModel().getValueAt(entry.getIdentifier(), 8).toString();
+                String payment = entry.getModel().getValueAt(entry.getIdentifier(), 6).toString();
+                boolean shouldExclude = status.trim().equals("Claimed") && payment.trim().equals("Paid");
+                return !shouldExclude;
+            }
+        });
+    }
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         loadLaundryData();
+        filterLaundry();
         container.removeAll();
         container.repaint();
         container.revalidate();
@@ -1247,6 +1254,8 @@ public class Laundry_Interface extends javax.swing.JFrame {
 
     private void laundryBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laundryBActionPerformed
         loadLaundryData();
+        filterLaundry();
+        jPanel2.setVisible(true);
         contentPanel.removeAll();
         contentPanel.repaint();
         contentPanel.revalidate();
@@ -1256,13 +1265,14 @@ public class Laundry_Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_laundryBActionPerformed
 
     private void laundryLogBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laundryLogBActionPerformed
-        loadData();
+        loadLaundryData();
+        jPanel2.setVisible(false);
         contentPanel.removeAll();
         contentPanel.repaint();
         contentPanel.revalidate();
-        contentPanel.add(laundryLog);
+        contentPanel.add(laundryPanel);
         contentPanel.repaint();
-        contentPanel.revalidate();    
+        contentPanel.revalidate();
     }//GEN-LAST:event_laundryLogBActionPerformed
 
     private void settingsBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_settingsBActionPerformed
@@ -1275,12 +1285,14 @@ public class Laundry_Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_settingsBActionPerformed
 
     private void logoutBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutBActionPerformed
-        container.removeAll();
-        container.repaint();
-        container.revalidate();
-        container.add(Login_page);
-        container.repaint();
-        container.revalidate();  
+        int response = JOptionPane.showConfirmDialog(null, 
+            "Are you sure you want to log out?", 
+            "Log Out", JOptionPane.YES_NO_OPTION);
+
+
+        if (response == JOptionPane.YES_OPTION) {
+            System.exit(0); // Close the application
+        }
     }//GEN-LAST:event_logoutBActionPerformed
 
     private void customerB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerB1ActionPerformed
@@ -1658,6 +1670,45 @@ public class Laundry_Interface extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_doneEditQueueBActionPerformed
 
+    private void UserAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UserAccountActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_UserAccountActionPerformed
+
+    private void SystemPreferencesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SystemPreferencesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SystemPreferencesActionPerformed
+
+    private void UserAccountMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UserAccountMouseClicked
+        Object[] options = {"Update Profile", "Change Password", "Cancel"};
+    
+        // Show the dialog
+        int choice = JOptionPane.showOptionDialog(this,
+                "What would you like to do?",
+                "User Account",
+                JOptionPane.YES_NO_CANCEL_OPTION,
+                JOptionPane.QUESTION_MESSAGE,
+                null, options, options[2]); // Default button is "Cancel"
+
+        // Handle the user's choice
+        switch (choice) {
+            case JOptionPane.YES_OPTION:
+                // Open the Update Profile functionality
+                UserAccountDialog.showUpdateProfileDialog(this);
+                break;
+            case JOptionPane.NO_OPTION:
+                // Open the Change Password functionality
+                UserAccountDialog.showChangePasswordDialog(this);
+                break;
+            default:
+                // User clicked "Cancel" or closed the dialog
+                break;
+        }
+    }//GEN-LAST:event_UserAccountMouseClicked
+
+    private void SystemPreferencesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SystemPreferencesMouseClicked
+        SystemPreferencesDialog.showSystemPreferencesDialog(this);
+    }//GEN-LAST:event_SystemPreferencesMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -1697,6 +1748,8 @@ public class Laundry_Interface extends javax.swing.JFrame {
     private javax.swing.JPanel Login_page;
     private javax.swing.JPanel Main_Interface;
     private javax.swing.JLabel Price;
+    private javax.swing.JButton SystemPreferences;
+    private javax.swing.JButton UserAccount;
     private javax.swing.JButton addCancelBtn;
     private javax.swing.JButton addConfirmBtn;
     private javax.swing.JButton addCustomer;
@@ -1771,9 +1824,9 @@ public class Laundry_Interface extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jSrollPane2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
@@ -1782,7 +1835,6 @@ public class Laundry_Interface extends javax.swing.JFrame {
     private javax.swing.JTextField l_nameDelete;
     private javax.swing.JTextField l_nameEdit;
     private javax.swing.JButton laundryB;
-    private javax.swing.JPanel laundryLog;
     private javax.swing.JButton laundryLogB;
     private javax.swing.JPanel laundryPanel;
     private javax.swing.JTable laundryTable;
@@ -1790,7 +1842,6 @@ public class Laundry_Interface extends javax.swing.JFrame {
     private javax.swing.JLabel lnameLabel1;
     private javax.swing.JLabel lnameLabel2;
     private javax.swing.JLabel lnameLabel3;
-    private javax.swing.JTable logTable;
     private javax.swing.JButton logoutB;
     private javax.swing.JPanel navBar;
     private javax.swing.JTextField ownerContact;
