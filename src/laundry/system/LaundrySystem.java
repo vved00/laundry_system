@@ -245,4 +245,17 @@ public class LaundrySystem {
         return tableModel;
     }
     
+    public static boolean validateLogin(String username, String password) {
+        String query = "SELECT * FROM accounts WHERE username = ? AND password = ?";
+        try (PreparedStatement pst = conn.prepareStatement(query)) {
+            pst.setString(1, username); // Set the username
+            pst.setString(2, password); // Set the password
+            try (ResultSet rs = pst.executeQuery()) {
+                return rs.next(); // Returns true if a matching record is found
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(LaundrySystem.class.getName()).log(Level.SEVERE, "Error validating login", ex);
+            return false;
+        }
+    }
 }
