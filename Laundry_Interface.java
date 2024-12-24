@@ -84,6 +84,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
         settingsPanel = new javax.swing.JPanel();
         navBar3 = new javax.swing.JPanel();
         UserAccount = new javax.swing.JButton();
+        PaymentOptions = new javax.swing.JButton();
         SystemPreferences = new javax.swing.JButton();
         customerPanel = new javax.swing.JPanel();
         customerTablePanel = new javax.swing.JPanel();
@@ -322,7 +323,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
         displayQueuePanel.setLayout(displayQueuePanelLayout);
         displayQueuePanelLayout.setHorizontalGroup(
             displayQueuePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 997, Short.MAX_VALUE)
+            .addGap(0, 653, Short.MAX_VALUE)
             .addGroup(displayQueuePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(displayQueuePanelLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -510,6 +511,19 @@ public class Laundry_Interface extends javax.swing.JFrame {
             }
         });
         navBar3.add(UserAccount, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 160, 70));
+
+        PaymentOptions.setText("Payment Options");
+        PaymentOptions.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                PaymentOptionsMouseClicked(evt);
+            }
+        });
+        PaymentOptions.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PaymentOptionsActionPerformed(evt);
+            }
+        });
+        navBar3.add(PaymentOptions, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 190, 160, 70));
 
         SystemPreferences.setText("System Preferences");
         SystemPreferences.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -850,7 +864,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
             .addGroup(customerAddPanelLayout.createSequentialGroup()
                 .addGap(102, 102, 102)
                 .addComponent(customerInformation1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(442, Short.MAX_VALUE))
+                .addContainerGap(95, Short.MAX_VALUE))
         );
         customerAddPanelLayout.setVerticalGroup(
             customerAddPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -961,7 +975,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
             .addGroup(customerEditPanelLayout.createSequentialGroup()
                 .addGap(102, 102, 102)
                 .addComponent(customerInformation2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(442, Short.MAX_VALUE))
+                .addContainerGap(95, Short.MAX_VALUE))
         );
         customerEditPanelLayout.setVerticalGroup(
             customerEditPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1077,7 +1091,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
             .addGroup(customerDeletePanelLayout.createSequentialGroup()
                 .addGap(104, 104, 104)
                 .addComponent(customerInformation3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(440, Short.MAX_VALUE))
+                .addContainerGap(93, Short.MAX_VALUE))
         );
         customerDeletePanelLayout.setVerticalGroup(
             customerDeletePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1559,6 +1573,10 @@ public class Laundry_Interface extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_UserAccountActionPerformed
 
+    private void PaymentOptionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PaymentOptionsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PaymentOptionsActionPerformed
+
     private void SystemPreferencesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SystemPreferencesActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_SystemPreferencesActionPerformed
@@ -1579,11 +1597,11 @@ public class Laundry_Interface extends javax.swing.JFrame {
     switch (choice) {
         case JOptionPane.YES_OPTION:
             // Open the Update Profile functionality
-            UserAccountDialog.showUpdateProfileDialog(this);
+            UserAccountDialog.showupdateProfile(this);
             break;
         case JOptionPane.NO_OPTION:
             // Open the Change Password functionality
-            UserAccountDialog.showChangePasswordDialog(this);
+            UserAccountDialog.showchangePassword(this);
             break;
         default:
             // User clicked "Cancel" or closed the dialog
@@ -1595,6 +1613,10 @@ public class Laundry_Interface extends javax.swing.JFrame {
     private void SystemPreferencesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SystemPreferencesMouseClicked
         SystemPreferencesDialog.showSystemPreferencesDialog(this);
     }//GEN-LAST:event_SystemPreferencesMouseClicked
+
+    private void PaymentOptionsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PaymentOptionsMouseClicked
+       PaymentOptionsDialog.showPaymentOptionsDialog(this);
+    }//GEN-LAST:event_PaymentOptionsMouseClicked
 
     /**
      * @param args the command line arguments
@@ -1634,6 +1656,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Login_page;
     private javax.swing.JPanel Main_Interface;
+    private javax.swing.JButton PaymentOptions;
     private javax.swing.JLabel Price;
     private javax.swing.JButton SystemPreferences;
     private javax.swing.JButton UserAccount;
