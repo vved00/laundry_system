@@ -100,6 +100,10 @@ public class Laundry_Interface extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         addCustomer = new javax.swing.JButton();
         selectButton = new javax.swing.JButton();
+        laundryLog = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        logTable = new javax.swing.JTable();
+        jLabel19 = new javax.swing.JLabel();
         settingsPanel = new javax.swing.JPanel();
         customerPanel = new javax.swing.JPanel();
         customerTablePanel = new javax.swing.JPanel();
@@ -577,11 +581,50 @@ public class Laundry_Interface extends javax.swing.JFrame {
 
         contentPanel.add(laundryPanel, "card2");
 
+        logTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane3.setViewportView(logTable);
+
+        jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel19.setText("Laundry Queue");
+
+        javax.swing.GroupLayout laundryLogLayout = new javax.swing.GroupLayout(laundryLog);
+        laundryLog.setLayout(laundryLogLayout);
+        laundryLogLayout.setHorizontalGroup(
+            laundryLogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(laundryLogLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addGroup(laundryLogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 625, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(14, Short.MAX_VALUE))
+        );
+        laundryLogLayout.setVerticalGroup(
+            laundryLogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, laundryLogLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20))
+        );
+
+        contentPanel.add(laundryLog, "card8");
+
         javax.swing.GroupLayout settingsPanelLayout = new javax.swing.GroupLayout(settingsPanel);
         settingsPanel.setLayout(settingsPanelLayout);
         settingsPanelLayout.setHorizontalGroup(
             settingsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 650, Short.MAX_VALUE)
+            .addGap(0, 653, Short.MAX_VALUE)
         );
         settingsPanelLayout.setVerticalGroup(
             settingsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -859,7 +902,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
             .addGroup(customerAddPanelLayout.createSequentialGroup()
                 .addGap(102, 102, 102)
                 .addComponent(customerInformation1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(107, Short.MAX_VALUE))
+                .addContainerGap(110, Short.MAX_VALUE))
         );
         customerAddPanelLayout.setVerticalGroup(
             customerAddPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -952,7 +995,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
             .addGroup(customerEditPanelLayout.createSequentialGroup()
                 .addGap(102, 102, 102)
                 .addComponent(customerInformation2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(107, Short.MAX_VALUE))
+                .addContainerGap(110, Short.MAX_VALUE))
         );
         customerEditPanelLayout.setVerticalGroup(
             customerEditPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1053,7 +1096,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
             .addGroup(customerDeletePanelLayout.createSequentialGroup()
                 .addGap(104, 104, 104)
                 .addComponent(customerInformation3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(105, Short.MAX_VALUE))
+                .addContainerGap(108, Short.MAX_VALUE))
         );
         customerDeletePanelLayout.setVerticalGroup(
             customerDeletePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1078,6 +1121,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
     static int selectedCustomer_id;
     static int selectedLaundry_id;
     private TableRowSorter<DefaultTableModel> tableRowSorter;
+    // get customer data
     private void loadCustomerData() {
         DefaultTableModel tableModel = LaundrySystem.getCustomerTableModel();
         customerTable.setModel(tableModel);
@@ -1094,10 +1138,20 @@ public class Laundry_Interface extends javax.swing.JFrame {
             browseCustomerTable.getColumnModel().removeColumn(browseCustomerTable.getColumnModel().getColumn(0));
         }
     }
-    // get laundry data
+    // get laundry queue data
     private void loadLaundryData(){
         DefaultTableModel tableModel = LaundrySystem.getLaundryLog();
         laundryTable.setModel(tableModel);
+        tableRowSorter = new TableRowSorter<>(tableModel);
+        laundryTable.setRowSorter(tableRowSorter);
+        if (laundryTable.getColumnModel().getColumnCount() > 3) {
+            laundryTable.getColumnModel().removeColumn(laundryTable.getColumnModel().getColumn(0));
+        }
+    }
+    // get laundry data
+    private void loadData(){
+        DefaultTableModel tableModel = LaundrySystem.laundryLog();
+        logTable.setModel(tableModel);
         tableRowSorter = new TableRowSorter<>(tableModel);
         laundryTable.setRowSorter(tableRowSorter);
         if (laundryTable.getColumnModel().getColumnCount() > 3) {
@@ -1180,22 +1234,9 @@ public class Laundry_Interface extends javax.swing.JFrame {
         editCustomerBtn.setEnabled(false);
         deleteCustomerBtn.setEnabled(false);
     }
-
-    private void filterLaundry() {
-        tableRowSorter.setRowFilter(new RowFilter<DefaultTableModel, Integer>() {
-            @Override
-            public boolean include(RowFilter.Entry<? extends DefaultTableModel, ? extends Integer> entry) {
-                String status = entry.getModel().getValueAt(entry.getIdentifier(), 8).toString();
-                String payment = entry.getModel().getValueAt(entry.getIdentifier(), 6).toString();
-                boolean shouldExclude = status.trim().equals("Claimed") && payment.trim().equals("Paid");
-                return !shouldExclude;
-            }
-        });
-    }
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         loadLaundryData();
-        filterLaundry();
         container.removeAll();
         container.repaint();
         container.revalidate();
@@ -1206,8 +1247,6 @@ public class Laundry_Interface extends javax.swing.JFrame {
 
     private void laundryBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laundryBActionPerformed
         loadLaundryData();
-        filterLaundry();
-        jPanel2.setVisible(true);
         contentPanel.removeAll();
         contentPanel.repaint();
         contentPanel.revalidate();
@@ -1217,14 +1256,13 @@ public class Laundry_Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_laundryBActionPerformed
 
     private void laundryLogBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_laundryLogBActionPerformed
-        loadLaundryData();
-        jPanel2.setVisible(false);
+        loadData();
         contentPanel.removeAll();
         contentPanel.repaint();
         contentPanel.revalidate();
-        contentPanel.add(laundryPanel);
+        contentPanel.add(laundryLog);
         contentPanel.repaint();
-        contentPanel.revalidate();
+        contentPanel.revalidate();    
     }//GEN-LAST:event_laundryLogBActionPerformed
 
     private void settingsBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_settingsBActionPerformed
@@ -1237,14 +1275,12 @@ public class Laundry_Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_settingsBActionPerformed
 
     private void logoutBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutBActionPerformed
-        int response = JOptionPane.showConfirmDialog(null, 
-            "Are you sure you want to log out?", 
-            "Log Out", JOptionPane.YES_NO_OPTION);
-
-
-        if (response == JOptionPane.YES_OPTION) {
-            System.exit(0); // Close the application
-        }
+        container.removeAll();
+        container.repaint();
+        container.revalidate();
+        container.add(Login_page);
+        container.repaint();
+        container.revalidate();  
     }//GEN-LAST:event_logoutBActionPerformed
 
     private void customerB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerB1ActionPerformed
@@ -1724,6 +1760,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -1736,6 +1773,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jSrollPane2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
@@ -1744,6 +1782,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
     private javax.swing.JTextField l_nameDelete;
     private javax.swing.JTextField l_nameEdit;
     private javax.swing.JButton laundryB;
+    private javax.swing.JPanel laundryLog;
     private javax.swing.JButton laundryLogB;
     private javax.swing.JPanel laundryPanel;
     private javax.swing.JTable laundryTable;
@@ -1751,6 +1790,7 @@ public class Laundry_Interface extends javax.swing.JFrame {
     private javax.swing.JLabel lnameLabel1;
     private javax.swing.JLabel lnameLabel2;
     private javax.swing.JLabel lnameLabel3;
+    private javax.swing.JTable logTable;
     private javax.swing.JButton logoutB;
     private javax.swing.JPanel navBar;
     private javax.swing.JTextField ownerContact;
