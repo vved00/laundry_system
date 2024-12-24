@@ -117,8 +117,8 @@ public class LaundrySystem {
                "JOIN customer_log ON laundry_log.laundry_owner = customer_log.customer_id " +
                "JOIN services ON laundry_log.laundry_service = services.service_id " +
                "JOIN payment_status ON laundry_log.payment_status = payment_status.payment_id " +
-               "JOIN laundry_status ON laundry_log.laundry_status = laundry_status.status_id " +
-               "WHERE laundry_log.laundry_status != 5";
+               "JOIN laundry_status ON laundry_log.laundry_status = laundry_status.status_id ";// +
+               //"WHERE laundry_log.laundry_status != 5";
         
         DefaultTableModel tableModel = new DefaultTableModel(new String[]{
                 "Laundry ID",  "Name", "Contact Number", "Weight (kg)",
