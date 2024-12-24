@@ -81,8 +81,8 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace pref="500" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace pref="279" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="jButton1" min="-2" pref="120" max="-2" attributes="0"/>
@@ -105,7 +105,7 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace pref="90" max="32767" attributes="0"/>
+                          <EmptySpace pref="68" max="32767" attributes="0"/>
                           <Component id="jLabel1" min="-2" pref="28" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jTextField2" min="-2" pref="34" max="-2" attributes="0"/>
@@ -236,6 +236,26 @@
                     </Constraint>
                   </Constraints>
                 </Component>
+                <Container class="javax.swing.JPanel" name="jPanel3">
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="0" y="0" width="800" height="360"/>
+                    </Constraint>
+                  </Constraints>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <EmptySpace min="0" pref="800" max="32767" attributes="0"/>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <EmptySpace min="0" pref="360" max="32767" attributes="0"/>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                </Container>
               </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="contentPanel">
@@ -777,15 +797,75 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="650" max="32767" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="navBar3" min="-2" pref="895" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="380" max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                              <Component id="navBar3" pref="326" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
+                  <SubComponents>
+                    <Container class="javax.swing.JPanel" name="navBar3">
+
+                      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+                        <Property name="useNullLayout" type="boolean" value="false"/>
+                      </Layout>
+                      <SubComponents>
+                        <Component class="javax.swing.JButton" name="UserAccount">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="User Account"/>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="UserAccountMouseClicked"/>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="UserAccountActionPerformed"/>
+                          </Events>
+                          <Constraints>
+                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                              <AbsoluteConstraints x="80" y="30" width="160" height="70"/>
+                            </Constraint>
+                          </Constraints>
+                        </Component>
+                        <Component class="javax.swing.JButton" name="PaymentOptions">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Payment Options"/>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="PaymentOptionsMouseClicked"/>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PaymentOptionsActionPerformed"/>
+                          </Events>
+                          <Constraints>
+                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                              <AbsoluteConstraints x="80" y="190" width="160" height="70"/>
+                            </Constraint>
+                          </Constraints>
+                        </Component>
+                        <Component class="javax.swing.JButton" name="SystemPreferences">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="System Preferences"/>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="SystemPreferencesMouseClicked"/>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SystemPreferencesActionPerformed"/>
+                          </Events>
+                          <Constraints>
+                            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                              <AbsoluteConstraints x="80" y="110" width="160" height="70"/>
+                            </Constraint>
+                          </Constraints>
+                        </Component>
+                      </SubComponents>
+                    </Container>
+                  </SubComponents>
                 </Container>
                 <Container class="javax.swing.JPanel" name="customerPanel">
                   <Constraints>
@@ -837,7 +917,7 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="0" pref="4" max="32767" attributes="0"/>
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                           <Component id="addCustomerBtn" min="-2" pref="34" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Component id="editCustomerBtn" min="-2" pref="34" max="-2" attributes="0"/>
@@ -1070,7 +1150,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
                               <Component id="customerInformation1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="107" max="32767" attributes="0"/>
+                              <EmptySpace pref="95" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1079,7 +1159,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
                               <Component id="customerInformation1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="78" max="32767" attributes="0"/>
+                              <EmptySpace pref="71" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1251,14 +1331,14 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
                               <Component id="customerInformation2" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="107" max="32767" attributes="0"/>
+                              <EmptySpace pref="95" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace pref="74" max="32767" attributes="0"/>
+                              <EmptySpace pref="67" max="32767" attributes="0"/>
                               <Component id="customerInformation2" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
                           </Group>
@@ -1284,7 +1364,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace pref="46" max="32767" attributes="0"/>
+                                  <EmptySpace pref="58" max="32767" attributes="0"/>
                                   <Component id="editCancelBtn" min="-2" pref="151" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                                   <Component id="editConfirmBtn" min="-2" pref="151" max="-2" attributes="0"/>
@@ -1429,7 +1509,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="104" max="-2" attributes="0"/>
                               <Component id="customerInformation3" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="105" max="32767" attributes="0"/>
+                              <EmptySpace pref="93" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1438,7 +1518,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
                               <Component id="customerInformation3" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="82" max="32767" attributes="0"/>
+                              <EmptySpace pref="75" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1477,7 +1557,7 @@
                                   <EmptySpace max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace pref="46" max="32767" attributes="0"/>
+                                  <EmptySpace pref="58" max="32767" attributes="0"/>
                                   <Component id="deleteCancelBtn" min="-2" pref="151" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                                   <Component id="deleteConfirmBtn" min="-2" pref="151" max="-2" attributes="0"/>
@@ -1605,17 +1685,4 @@
       </SubComponents>
     </Container>
   </SubComponents>
-</Form>/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Laundry_Interface;
-
-/**
- *
- * @author lykaj
- */
-public class form {
-    
-}
+</Form>
